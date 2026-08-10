@@ -1,6 +1,6 @@
-# Final X thread v3 — unpublished
+# Final X thread v3 — published
 
-Status: human voice approved by Juan on 2026-08-10. Do not publish automatically.
+Status: human voice approved by Juan and published from @Juanchi_AR on 2026-08-10.
 
 ## 1/10
 

@@ -1,6 +1,6 @@
 # Digital Credit Field Guide
 
-An original, source-led editorial package for Apyx’s “Why Digital Credit Matters” Superteam Earn bounty. The primary deliverable is an unpublished ten-post X thread; this site is its evidence layer.
+An original, source-led editorial package for Apyx’s “Why Digital Credit Matters” Superteam Earn bounty. The primary deliverable is a ten-post X thread published from @Juanchi_AR; this site is its evidence layer.
 
 ## One-command setup
 

@@ -10,7 +10,7 @@ I approached Digital Credit as a software architect would approach a distributed
 
 The primary submission is a ten-post educational X thread. The supporting field guide adds a dated claim ledger, primary sources, a two-layer risk model, an interactive cash-flow explorer, a hypothetical waterfall, seven deterministic social cards and a transparent methodology. Its Solana check preserves the finalized RPC evidence and states exactly what a deployed mint does—and does not—prove.
 
-X thread: [X_THREAD_URL]
+X thread: https://x.com/Juanchi_AR/status/2086678918317084983
 
 Field guide: https://juantorchia.github.io/digital-credit-field-guide/
 
@@ -20,4 +20,4 @@ Built and researched by Juan Torchia (@Juanchi_AR). Educational research only; n
 
 ## Link field
 
-`[X_THREAD_URL]`
+`https://x.com/Juanchi_AR/status/2086678918317084983`

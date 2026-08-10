@@ -64,7 +64,8 @@ async function main() {
         .filter((line) => !line.startsWith('Visual:'))
         .join('\n')
         .trim();
-      if ([...body].length > 280)
+      const xWeightedBody = body.replace(/https?:\/\/\S+/g, 'x'.repeat(23));
+      if ([...xWeightedBody].length > 280)
         errors.push(`thread.md post ${index + 1}: exceeds 280 characters`);
     }
   }

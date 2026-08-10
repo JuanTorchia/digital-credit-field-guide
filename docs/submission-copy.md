@@ -12,9 +12,9 @@ The primary submission is a ten-post educational X thread. The supporting field 
 
 X thread: [X_THREAD_URL]
 
-Field guide: [PREVIEW_URL]
+Field guide: https://juantorchia.github.io/digital-credit-field-guide/
 
-Repository: [REPOSITORY_URL]
+Repository: https://github.com/JuanTorchia/digital-credit-field-guide
 
 Built and researched by Juan Torchia (@Juanchi_AR). Educational research only; not financial advice.
 

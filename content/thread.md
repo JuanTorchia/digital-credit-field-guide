@@ -86,6 +86,6 @@ instrument · issuer · custody · wrapper · liquidity · jurisdiction · evide
 
 $APYX is described as Apyx’s governance token. I treat it as a separate layer, not proof of the credit thesis.
 
-Sources and method: [PREVIEW_URL]
+Sources and method: https://juantorchia.github.io/digital-credit-field-guide/
 
 Visual: `06-checklist.png`

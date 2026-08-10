@@ -27,6 +27,10 @@ Last updated: 2026-08-10 UTC
   page shell and imports the complete narrative from `content/report.mdx`.
   Typecheck, build, content validation and 10 desktop/mobile Playwright checks
   pass without hydration errors.
+- 2026-08-10: Replaced the generic flow explorer with a six-boundary Apyx
+  system trace. Every step exposes its ledger claim, primary evidence, domain,
+  evidentiary limit and evidence date. Pointer and arrow-key navigation pass on
+  desktop and mobile.
 
 ## Gate log
 

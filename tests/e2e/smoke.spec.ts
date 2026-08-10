@@ -17,10 +17,20 @@ for (const path of ['/', '/methodology', '/sources', '/share']) {
     ).toEqual([]);
   });
 }
-test('flow explorer supports selection', async ({ page }) => {
+test('Apyx system trace supports pointer and keyboard selection', async ({
+  page,
+}) => {
   await page.goto('/');
-  const tab = page.getByRole('tab', { name: /Instrument/ });
-  await tab.click();
-  await expect(tab).toHaveAttribute('aria-selected', 'true');
-  await expect(page.getByRole('tabpanel')).toContainText('offchain treasury');
+  const treasury = page.getByRole('tab', { name: /Treasury allocates/ });
+  await treasury.click();
+  await expect(treasury).toHaveAttribute('aria-selected', 'true');
+  await expect(page.getByRole('tabpanel')).toContainText(
+    'intended custody and allocation architecture',
+  );
+
+  await treasury.press('ArrowRight');
+  const cashFlow = page.getByRole('tab', { name: /Cash flow crosses/ });
+  await expect(cashFlow).toBeFocused();
+  await expect(cashFlow).toHaveAttribute('aria-selected', 'true');
+  await expect(page.getByRole('tabpanel')).toContainText('does not support');
 });

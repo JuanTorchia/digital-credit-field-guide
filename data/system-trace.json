@@ -1,0 +1,62 @@
+[
+  {
+    "id": "access",
+    "name": "Access gate",
+    "domain": "Legal / interface",
+    "claimId": "jurisdiction-restrictions",
+    "mechanism": "A participant reaches the protocol subject to the current Terms and jurisdiction restrictions.",
+    "sourceIds": ["apyx-terms"],
+    "proves": "The published conditions for who may use the Site and Protocol as of the evidence date.",
+    "doesNotProve": "That every technically reachable wallet is eligible or that access is global."
+  },
+  {
+    "id": "capital",
+    "name": "Capital enters",
+    "domain": "Protocol module",
+    "claimId": "apyx-flow",
+    "mechanism": "Apyx documents accepted user capital entering its protocol flow before treasury deployment.",
+    "sourceIds": ["apyx-how"],
+    "proves": "The flow described by Apyx in its product documentation.",
+    "doesNotProve": "Current availability, transaction volume or independent reconciliation of deposits."
+  },
+  {
+    "id": "treasury",
+    "name": "Treasury allocates",
+    "domain": "Offchain finance",
+    "claimId": "apyx-flow",
+    "mechanism": "The documented offchain treasury acquires preferred securities and liquid assets.",
+    "sourceIds": ["apyx-how", "apyx-transparency"],
+    "proves": "The intended custody and allocation architecture.",
+    "doesNotProve": "The assets held at this moment, their valuation or reserve sufficiency."
+  },
+  {
+    "id": "cash-flow",
+    "name": "Cash flow crosses",
+    "domain": "Offchain → onchain",
+    "claimId": "apyx-flow",
+    "mechanism": "Declared cash dividends are collected offchain; Apyx says value is then moved to an onchain vault that changes apyUSD redemption value.",
+    "sourceIds": ["apyx-how", "strategy-strc-8k", "strive-sata-8k"],
+    "proves": "How the published design connects issuer cash flows to protocol accounting.",
+    "doesNotProve": "That a dividend will be declared, arrive on schedule or match a quoted return."
+  },
+  {
+    "id": "solana",
+    "name": "Token state exists",
+    "domain": "Solana",
+    "claimId": "solana-launch",
+    "mechanism": "The two published addresses resolved as initialized classic SPL Token mints with six decimals at finalized slot 438320962.",
+    "sourceIds": ["apyx-contract-addresses", "solana-rpc-snapshot"],
+    "proves": "Token representation and visible mint/freeze authority configuration at that slot.",
+    "doesNotProve": "Reserves, legitimate supply, liquidity, bridge safety or redemption behavior."
+  },
+  {
+    "id": "holder-rights",
+    "name": "Holder receives a claim",
+    "domain": "Legal / token",
+    "claimId": "holder-rights",
+    "mechanism": "The Terms describe protocol-generated tokens as programmatic claims against modules holding assets.",
+    "sourceIds": ["apyx-terms", "apyx-how"],
+    "proves": "How Apyx documents the holder relationship to protocol modules.",
+    "doesNotProve": "Direct ownership of STRC or SATA, or a claim against a particular company or person."
+  }
+]

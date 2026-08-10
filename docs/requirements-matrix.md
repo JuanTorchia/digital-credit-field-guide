@@ -17,6 +17,7 @@ Audited: 2026-08-10 UTC. Statuses: `proven`, `incomplete`, `contradictory`, `no 
 | No unsupported metrics or promises                      | Critical | Validator and copy                  | Prohibited-language and number-ledger checks                 | proven     |
 | Facts / interpretation / inference separated            | Critical | Claims and methodology              | Every retained claim labeled and dated                       | proven     |
 | Underlying and wrapper risk distinguished               | Critical | Thread 6, card 04, Risk Lens        | Dedicated two-layer model                                    | proven     |
+| Apyx value flow and system boundaries                   | Critical | `data/system-trace.json`, explorer  | Six steps map claims, sources, proof and limits              | proven     |
 | Holder rights and jurisdiction visible                  | Critical | Thread 8–9, report, claims          | Controlling Terms mapped and dated                           | proven     |
 | Market, liquidity, counterparty, contracts, regulation  | Critical | Risk Lens and article               | Five categories rendered and axe-tested                      | proven     |
 | “What would change my mind”                             | High     | Report and research notes           | Dedicated section                                            | proven     |

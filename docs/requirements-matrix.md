@@ -25,13 +25,13 @@ Audited: 2026-08-10 UTC. Statuses: `proven`, `incomplete`, `contradictory`, `no 
 | Two to four visuals in first six posts                  | High     | Thread posts 1, 2, 4 and 6          | Four explicit visual references                              | proven     |
 | Premium mobile-first microsite                          | High     | Next.js app                         | Public browser check; no overflow; Playwright desktop/mobile | proven     |
 | Long-form MDX, methodology and sources                  | Critical | `content/report.mdx` and routes     | Home imports the MDX directly; static build + browser checks | proven     |
-| Public preview and repository                           | Critical | GitHub Pages and GitHub             | Deployment and links verified at commit `35cb2bc`            | proven     |
+| Public preview and repository                           | Critical | GitHub Pages and GitHub             | CI + Pages green; public verification at `fec5470`           | proven     |
 | Reproducible source/claim ledger                        | Critical | JSON, RPC snapshot, scope ledger    | 15/15 links; finalized request/response retained             | proven     |
 | Per-claim evidence inspection and downloads             | High     | `/sources`, `/share`, downloads     | Direct dated links; 18 desktop/mobile E2E checks             | proven     |
 | Open Graph / X sharing metadata                         | High     | `app/opengraph-image.png`, metadata | 1200×630 asset; exported base-path URL inspected             | proven     |
 | Demo script 60–90 seconds                               | Medium   | Script + `public/demo`              | Timed 75s storyboard; five production-export captures        | proven     |
 | Exact Superteam copy                                    | High     | `docs/submission-copy.md`           | URLs included; X URL intentionally pending                   | proven     |
-| CI: format/lint/types/tests/content/build/e2e/axe/links | Critical | GitHub workflow and local QA        | `pnpm verify`; 4 unit + 18 desktop/mobile browser tests      | proven     |
+| CI: format/lint/types/tests/content/build/e2e/axe/links | Critical | GitHub workflow and local QA        | `pnpm verify`; 7 unit + 18 desktop/mobile browser tests      | proven     |
 | Loading/error/empty states                              | Medium   | Route boundaries/source UI          | Three focused boundary-state tests                           | proven     |
 | Lighthouse at least 90 in four categories               | High     | Public QA record                    | v2 public scores: 96/100/96/100                              | proven     |
 | No automatic publish, submit, spend or finance          | Gate     | Process controls                    | No prohibited operation performed                            | proven     |

@@ -40,7 +40,7 @@ Last updated: 2026-08-10 UTC
   gates. CI now checks deterministic PNG output and runs both browser projects.
   E2E fails on console/hydration errors and covers the trace keyboard flow plus
   the stress exercise. Full `pnpm verify` passed; the final focused run passed
-  4 unit and 14 browser tests, static build, axe, content and all 15 external
+  7 unit and 18 browser tests, static build, axe, content and all 15 external
   source links. The link checker now reports bot-blocked URLs as inconclusive
   rather than verified.
 - 2026-08-10: Claims now expose direct dated evidence links instead of raw
@@ -54,6 +54,12 @@ Last updated: 2026-08-10 UTC
   claim evidence and share kit. Browser verification found meaningful content,
   no framework overlay and no page errors. The 75-second storyboard now maps to
   these real frames and reserves the voiceover for Juan.
+- 2026-08-10: Final CI and GitHub Pages workflows passed at `fec5470`. Public
+  verification confirmed six trace steps, six downloadable artifacts, five
+  evidence-download controls, OG/Twitter metadata, a 1200×630 OG image and
+  byte-identical hashes for all seven social cards. Two deployment-gate defects
+  were found and fixed first: E2E inherited the Pages base path, and the Pages
+  job did not install Chromium.
 
 ## Gate log
 

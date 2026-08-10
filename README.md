@@ -17,7 +17,7 @@ Run locally with `pnpm dev`, then open http://localhost:3000.
 - TypeScript strict and Tailwind CSS v4.
 - JSON claim/source ledgers validated with Zod.
 - MDX long-form source in `content/report.mdx`.
-- Two small client islands: Credit Flow Explorer and hypothetical Yield Waterfall.
+- Two small client islands: Apyx System Trace and hypothetical Yield Waterfall.
 - Seven deterministic 1600×900 PNG cards rendered from `data/cards.json` with Sharp.
 - A deterministic 1200×630 Open Graph image and downloadable evidence bundle generated with the same artifact pipeline.
 - Vitest for model/data invariants; Playwright + axe for desktop/mobile smoke and accessibility.

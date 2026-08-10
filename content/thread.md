@@ -1,92 +1,94 @@
-# Final X thread v2 — unpublished
+# Final X thread v3 — unpublished
 
-Status: candidate for simulated jury re-review. Do not publish automatically.
+Status: human voice approved by Juan on 2026-08-10. Do not publish automatically.
 
 ## 1/10
 
-Tokenizing credit changes how a claim moves, what software can do with it, and what users can inspect.
+When credit moves onchain, which part actually moved?
 
-It does not strengthen the issuer or create an exit.
+@Apyx_Fi publishes token mints on Solana. The issuers, dividends, custody and exit market remain outside it.
 
-I traced @Apyx_Fi from preferred shares to Solana mints. Here is what actually becomes digital. 🧵
+Here is the trace from $STRC and $SATA to the Solana token layer. 🧵
 
 Visual: `01-thesis.png`
 
 ## 2/10
 
-Apyx uses “Digital Credit” for publicly traded preferred equity issued by digital-asset treasury companies, connected to onchain rails.
+Start with the name.
 
-It remains equity—not a deposit, Treasury bill or new legal category.
+Apyx uses “Digital Credit” for preferred equity issued by digital-asset treasury companies and connected to onchain rails.
+
+The cash flow may look credit-like. The legal instrument is still equity.
 
 Visual: `02-definition.png`
 
 ## 3/10
 
-Two examples are Strategy’s $STRC and Strive’s $SATA: Nasdaq-listed, variable-rate perpetual preferred shares.
+$STRC from Strategy and $SATA from Strive are Nasdaq-listed variable-rate perpetual preferred shares.
 
-They sit below debt and above common equity. Dividends and market prices can change.
+Under their terms, they rank below debt and above common equity. Perpetual means no maturity date. Neither structure fixes price or dividend.
 
 ## 4/10
 
-Apyx documents this path:
+Apyx’s documentation maps a hybrid path:
 
 capital → preferred securities → declared dividends → treasury/custody → onchain vault → user
 
-Each handoff may add capability—and always adds a dependency.
+Each arrow is an integration boundary. It may add useful capability; it also adds something the system depends on.
 
 Visual: `03-flow.png`
 
 ## 5/10
 
-Why use token rails at all?
+What do token rails add?
 
-Balances can move between wallets, be inspected publicly and become inputs to software. Solana supplies those token primitives.
+A balance can move across compatible wallets, be inspected onchain and become an input to software. Solana provides those primitives.
 
-That is distribution infrastructure, not better underwriting.
+That is real infrastructure. It tells me nothing, by itself, about whether an issuer will pay.
 
 ## 6/10
 
-After 20 years designing systems, I read this as two connected layers:
+My architecture sketch has two boxes.
 
-Underlying — issuer, dividend, market, custody
+One holds issuer, dividend, market and custody risk. The other holds contracts, token controls, liquidity, integrations and regulation.
 
-Wrapper — contracts, token controls, liquidity, integrations, regulation
-
-The interface is not the obligation.
+Debugging one box does not validate the other.
 
 Visual: `04-layers.png`
 
 ## 7/10
 
-Apyx publishes apxUSD and apyUSD Solana addresses. Both resolve as initialized SPL Token mints with retained mint and freeze authorities.
+The published addresses are directly verifiable.
 
-That verifies token representation—and identifies controls to inspect. It does not verify reserves or liquidity.
+Apyx’s apxUSD and apyUSD addresses resolve as initialized SPL Token mints. Both retain mint and freeze authorities.
+
+That confirms one finalized slot’s configuration. Who controls those authorities, and under what policy?
 
 Visual: `05-controls.png`
 
 ## 8/10
 
-The legal boundary matters too.
+The Terms answer a different question: what does the holder own?
 
-Apyx’s Terms describe its tokens as programmatic claims against protocol modules—not direct ownership of $STRC or $SATA.
+Apyx’s Terms describe tokens as programmatic claims against protocol modules—not direct ownership of $STRC or $SATA. $APYX is governance, a separate control layer.
 
-The docs describe $APYX as governance: a separate control layer, not evidence of backing.
+Access depends on jurisdiction too.
 
 ## 9/10
 
-The strongest counterargument: why add a protocol when an eligible investor can use a broker?
+Documentation cannot answer the operating question yet: will programmability outweigh added custody, contract and liquidity surfaces?
 
-Programmability must justify the extra controls, costs and failure modes. Access is jurisdiction-dependent; Apyx’s current Terms exclude several major markets.
+An eligible investor can use a broker. The measurable test is whether access and programmable distribution justify the added layer.
 
 Visual: `06-compare.png`
 
 ## 10/10
 
-My field check for tokenized credit:
+A practical test: follow the claim.
 
-instrument · holder rights · issuer · custody · token controls · liquidity · jurisdiction · evidence date
+Who issued it? What does the holder legally own? Who has custody? Who controls the token? Where can it be sold or redeemed—and under which rules?
 
-I published the sources, open questions and verification method here:
+Sources, open questions and RPC evidence:
 https://juantorchia.github.io/digital-credit-field-guide/
 
 Visual: `07-checklist.png`

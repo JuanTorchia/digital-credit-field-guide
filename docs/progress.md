@@ -17,6 +17,10 @@ Last updated: 2026-08-10 UTC
   not yet a clear winner.
 - 2026-08-10: Version two work started: legal rights, jurisdiction, Solana
   controls, reproducible RPC evidence, earlier Apyx framing and richer cards.
+- 2026-08-10: Blind v2 panel returned 9.1/10 sponsor, 92/100 technical and
+  91/100 editorial scores with no factual blocker.
+- 2026-08-10: Remote CI and Pages deployment passed. Public Lighthouse v2:
+  96 Performance, 100 Accessibility, 96 Best Practices, 100 SEO.
 
 ## Gate log
 

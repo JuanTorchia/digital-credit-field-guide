@@ -1,0 +1,26 @@
+[
+  {
+    "id": "base",
+    "label": "Base exercise",
+    "grossCashFlow": 100,
+    "costs": 12,
+    "reserves": 18,
+    "note": "A neutral teaching case, not an estimate of Apyx."
+  },
+  {
+    "id": "upside",
+    "label": "Lower-friction exercise",
+    "grossCashFlow": 100,
+    "costs": 8,
+    "reserves": 12,
+    "note": "Illustrates sensitivity to lower costs and reserves; not a prediction."
+  },
+  {
+    "id": "stress",
+    "label": "Stress exercise",
+    "grossCashFlow": 70,
+    "costs": 18,
+    "reserves": 24,
+    "note": "Illustrates cash-flow compression; not a forecast."
+  }
+]

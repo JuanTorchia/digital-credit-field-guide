@@ -1,0 +1,44 @@
+[
+  {
+    "id": "01-thesis",
+    "eyebrow": "DIGITAL CREDIT FIELD GUIDE",
+    "title": "Tokenization changes the interface. It does not erase the obligation underneath.",
+    "subtitle": "A systems view of Digital Credit, using Apyx as a documented case study.",
+    "kind": "thesis"
+  },
+  {
+    "id": "02-definition",
+    "eyebrow": "A WORKING DEFINITION",
+    "title": "Public preferred equity with credit-like cash flows — represented through onchain rails.",
+    "subtitle": "Still equity. Not a deposit. Not a Treasury bill. Not a promise without conditions.",
+    "kind": "definition"
+  },
+  {
+    "id": "03-flow",
+    "eyebrow": "FOLLOW THE CASH FLOW",
+    "title": "Capital → preferred securities → cash dividends → treasury & custody → onchain vault → user",
+    "subtitle": "Every arrow is both infrastructure and a place where risk can enter.",
+    "kind": "flow"
+  },
+  {
+    "id": "04-layers",
+    "eyebrow": "TWO CONNECTED RISK LAYERS",
+    "title": "Underlying: issuer, dividend, market, custody. Wrapper: contracts, liquidity, integration, regulation.",
+    "subtitle": "Better visibility into one layer does not neutralize the other.",
+    "kind": "layers"
+  },
+  {
+    "id": "05-compare",
+    "eyebrow": "COMPARE THE OBLIGATION",
+    "title": "Deposit · Treasury · preferred equity · DeFi strategy",
+    "subtitle": "Ask who owes what, what can change, how you exit, and which rules govern the claim.",
+    "kind": "compare"
+  },
+  {
+    "id": "06-checklist",
+    "eyebrow": "THE FIELD CHECK",
+    "title": "Instrument. Issuer. Custody. Wrapper. Liquidity. Jurisdiction. Evidence date.",
+    "subtitle": "If one is missing, the yield number is not yet an explanation.",
+    "kind": "checklist"
+  }
+]

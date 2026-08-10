@@ -6,13 +6,16 @@ const risks = [
   ],
   [
     'Counterparty',
-    'Issuer, custodian and operational entities remain relevant.',
+    'Issuer, custodian, protocol modules and holder rights remain relevant.',
   ],
   [
     'Smart contract',
     'Code, oracle and integration failures are wrapper risks.',
   ],
-  ['Regulation', 'Access, classification and remedies vary by jurisdiction.'],
+  [
+    'Regulation',
+    'Access, classification and remedies vary; current Terms restrict major markets.',
+  ],
 ];
 export function RiskLens() {
   return (

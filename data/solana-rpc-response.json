@@ -1,0 +1,45 @@
+{
+  "jsonrpc": "2.0",
+  "result": {
+    "context": { "apiVersion": "4.2.0-rc.1", "slot": 438320962 },
+    "value": [
+      {
+        "data": {
+          "parsed": {
+            "info": {
+              "decimals": 6,
+              "freezeAuthority": "5CcTTUPtSxF1iB5d2fGR7gYHbUBHL1orwzbuZdQGJ1CG",
+              "isInitialized": true,
+              "mintAuthority": "pVrU5baovRPoQfaqHMvB1E1HdQvx6dBBFvheN8MzkRE",
+              "supply": "4888137492699"
+            },
+            "type": "mint"
+          },
+          "program": "spl-token",
+          "space": 82
+        },
+        "executable": false,
+        "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+      },
+      {
+        "data": {
+          "parsed": {
+            "info": {
+              "decimals": 6,
+              "freezeAuthority": "5CcTTUPtSxF1iB5d2fGR7gYHbUBHL1orwzbuZdQGJ1CG",
+              "isInitialized": true,
+              "mintAuthority": "EGsmQ5wbCC64pBRi13CAVWz7kPmsJ8fm8zAcJoeKvyc2",
+              "supply": "2986157865208"
+            },
+            "type": "mint"
+          },
+          "program": "spl-token",
+          "space": 82
+        },
+        "executable": false,
+        "owner": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+      }
+    ]
+  },
+  "id": 1
+}

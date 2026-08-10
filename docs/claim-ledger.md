@@ -16,6 +16,10 @@ As of 2026-08-10 UTC. Machine-readable records live in `data/claims.json`.
 | `apyx-no-fixed-peg`         | Apyx says apxUSD is not a strict peg                     | Apyx risk disclosure                  | Always attribute                |
 | `apyx-token-status`         | Apyx describes $APYX as a future governance token        | Apyx token docs                       | Do not imply current trading    |
 | `solana-launch`             | Two initialized Apyx SPL Token mints exist on mainnet    | Apyx registry + Solana RPC            | Not proof of liquidity/reserves |
+| `holder-rights`             | Tokens are claims against protocol modules               | Controlling Apyx Terms                | Not direct STRC/SATA ownership  |
+| `jurisdiction-restrictions` | Protocol access is jurisdiction-dependent                | Controlling Apyx Terms                | Re-check before publication     |
+| `audit-scope-boundary`      | Scoped reports do not imply system-wide assurance        | Apyx index + Halborn report           | One of five reports mapped      |
+| `author-experience`         | Juan has 20 years of IT/software architecture experience | Author professional profile           | Voice context only              |
 
 ## Uncertain
 
@@ -25,11 +29,14 @@ As of 2026-08-10 UTC. Machine-readable records live in `data/claims.json`.
 
 ## Rejected
 
-| Claim                                  | Reason                                                         |
-| -------------------------------------- | -------------------------------------------------------------- |
-| Digital Credit removes credit risk     | Representation does not change issuer capacity                 |
-| Preferred dividends are guaranteed     | Declaration/default risk remains                               |
-| apxUSD is always worth one dollar      | Contradicted by Apyx’s no-fixed-peg disclosure                 |
-| Any current APY, TVL, supply or volume | Time-sensitive and unnecessary; needs publication-day evidence |
-| Solana deployment proves liquidity     | Mint existence does not establish liquidity or bridge safety   |
-| Broad audit/security assurance claims  | Reports exist; scope and unresolved findings need review       |
+| Claim                                  | Reason                                                          |
+| -------------------------------------- | --------------------------------------------------------------- |
+| Digital Credit removes credit risk     | Representation does not change issuer capacity                  |
+| Preferred dividends are guaranteed     | Declaration/default risk remains                                |
+| apxUSD is always worth one dollar      | Contradicted by Apyx’s no-fixed-peg disclosure                  |
+| Any current APY, TVL, supply or volume | Time-sensitive and unnecessary; needs publication-day evidence  |
+| Solana deployment proves liquidity     | Mint existence does not establish liquidity or bridge safety    |
+| Broad audit/security assurance claims  | Reports exist; scope and unresolved findings need review        |
+| Token holders directly own STRC/SATA   | Terms define claims against protocol modules, not issuers       |
+| Apyx access is global                  | Current Terms restrict several major jurisdictions              |
+| Retained token authority implies abuse | Authority is a control surface; intent/use needs other evidence |

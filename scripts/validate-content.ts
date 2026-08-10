@@ -1,5 +1,6 @@
 import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
+import { parseTweet } from 'twitter-text';
 import { claimSchema, sourceSchema } from '../lib/content/schema';
 const root = resolve(import.meta.dirname, '..');
 async function main() {
@@ -31,9 +32,7 @@ async function main() {
       .split('\n')
       .filter(
         (l) =>
-          !/^#{1,6}\s+\d+\/\d+/.test(l) &&
-          !/^Visual:/.test(l) &&
-          !/^Status:/.test(l),
+          !/^#{1,6}\s+/.test(l) && !/^Visual:/.test(l) && !/^Status:/.test(l),
       )
       .join('\n');
     const prohibited = /\b(guaranteed|risk-free|safe yield)\b/gi;
@@ -64,10 +63,31 @@ async function main() {
         .filter((line) => !line.startsWith('Visual:'))
         .join('\n')
         .trim();
-      const xWeightedBody = body.replace(/https?:\/\/\S+/g, 'x'.repeat(23));
-      if ([...xWeightedBody].length > 280)
-        errors.push(`thread.md post ${index + 1}: exceeds 280 characters`);
+      const parsedTweet = parseTweet(body);
+      if (!parsedTweet.valid || parsedTweet.weightedLength > 280)
+        errors.push(
+          `thread.md post ${index + 1}: invalid weighted X length ${parsedTweet.weightedLength}`,
+        );
     }
+
+    const mintEvidence = JSON.parse(
+      await readFile(resolve(root, 'data/solana-mint-evidence.json'), 'utf8'),
+    ) as {
+      slot?: number;
+      observations?: Record<string, unknown>;
+      rawResponse?: string;
+    };
+    if (!mintEvidence.slot || !mintEvidence.rawResponse)
+      errors.push('solana-mint-evidence.json: missing slot or raw response');
+    if (
+      mintEvidence.observations?.bothRetainMintAuthority !== true ||
+      mintEvidence.observations?.bothRetainFreezeAuthority !== true
+    )
+      errors.push('solana-mint-evidence.json: authority state not explicit');
+    if (mintEvidence.rawResponse)
+      await readFile(resolve(root, mintEvidence.rawResponse), 'utf8').catch(
+        () => errors.push('solana-mint-evidence.json: raw response is missing'),
+      );
   }
   if (errors.length) {
     console.error(`Content validation failed:\n- ${errors.join('\n- ')}`);

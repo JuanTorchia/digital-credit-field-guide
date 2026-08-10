@@ -7,11 +7,11 @@ export default function Share() {
     <main id="main" className="container py-16">
       <p className="label text-[#b84f2c]">SHARE KIT / 1600 × 900</p>
       <h1 className="display mt-6 text-[clamp(4rem,10vw,8rem)]">
-        Six cards. One evidence system.
+        Seven cards. One evidence system.
       </h1>
       <p className="mt-7 max-w-2xl text-xl text-[#596159]">
         Generated deterministically from <code>data/cards.json</code>. No
-        decorative AI imagery; only typography and documented models.
+        decorative AI imagery; only typography, diagrams and documented models.
       </p>
       <div className="mt-14 grid gap-8 sm:grid-cols-2">
         {cards.map((card, index) => (

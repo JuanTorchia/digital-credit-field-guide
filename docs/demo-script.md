@@ -7,7 +7,7 @@
 | 20–34s | Click through Credit Flow Explorer | “Follow the value from capital to security, dividend, custody, vault and user. Every handoff adds capability and a failure surface.”                                     |
 | 34–46s | Risk Lens                          | “The key model separates underlying issuer and market risk from wrapper contract, liquidity and regulatory risk.”                                                        |
 | 46–57s | Yield Waterfall interaction        | “The waterfall uses abstract units to show why gross cash flow is not a user outcome. It is explicitly not a forecast.”                                                  |
-| 57–67s | Sources page, open uncertain claim | “Every material claim maps to dated evidence. Conflicting Solana launch evidence stays visible as unresolved.”                                                           |
-| 67–75s | Cards and field check              | “The thread stands alone; the field guide makes its evidence inspectable. Instrument, issuer, custody, wrapper, liquidity, jurisdiction, date.”                          |
+| 57–67s | Sources page, open Solana evidence | “The Solana claim stores a finalized RPC snapshot, including token controls and explicit limits. A mint does not prove reserves or liquidity.”                           |
+| 67–75s | Cards and field check              | “The thread stands alone; the guide makes its evidence inspectable. Instrument, rights, issuer, custody, controls, liquidity, jurisdiction, date.”                       |
 
 Recording notes: 1440×900 viewport, reduced motion, cursor visible, no wallet or product transaction, final frame on source ledger URL.

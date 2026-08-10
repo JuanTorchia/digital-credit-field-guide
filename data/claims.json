@@ -81,17 +81,17 @@
   },
   {
     "id": "solana-launch",
-    "claim": "Apyx publishes Solana mint addresses for apxUSD and apyUSD, and both resolve as initialized SPL Token mints on Solana mainnet.",
+    "claim": "Apyx publishes Solana mint addresses for apxUSD and apyUSD; at finalized slot 438320962 both resolved as initialized classic SPL Token mints with 6 decimals and retained mint and freeze authorities.",
     "sourceIds": [
-      "superteam-bounty",
       "apyx-contract-addresses",
-      "solana-token-basics"
+      "solana-token-basics",
+      "solana-rpc-snapshot"
     ],
     "asOf": "2026-08-10",
     "status": "verified",
     "confidence": "high",
     "factOrInference": "fact",
-    "notes": "Verified by getMultipleAccounts at Solana mainnet slot 438319427. This establishes token deployment, not liquidity, frontend access or bridge safety."
+    "notes": "Unit: token decimals. Context: finalized getMultipleAccounts snapshot. This establishes token representation and visible authority configuration, not reserves, legitimate supply, liquidity, frontend access, accounting location or bridge safety."
   },
   {
     "id": "apyx-token-status",
@@ -101,6 +101,50 @@
     "status": "verified",
     "confidence": "medium",
     "factOrInference": "fact",
-    "notes": "Mention only to satisfy listing naturally; avoid token economics claims."
+    "notes": "Governance is a distinct control layer; avoid token economics, trading or value claims."
+  },
+  {
+    "id": "holder-rights",
+    "claim": "Apyx Terms describe apxUSD and apyUSD as programmatic claims against protocol modules holding assets, not claims against a particular entity or person; this is not direct ownership of STRC or SATA.",
+    "sourceIds": ["apyx-terms", "apyx-how"],
+    "asOf": "2026-08-10",
+    "status": "verified",
+    "confidence": "high",
+    "factOrInference": "fact",
+    "notes": "The first clause paraphrases the controlling Terms. The direct-ownership conclusion is an explicit legal-boundary interpretation, not legal advice."
+  },
+  {
+    "id": "jurisdiction-restrictions",
+    "claim": "Apyx Terms restrict use by persons connected to the United States, European Union, United Kingdom, Canada and other listed territories; access is jurisdiction-dependent rather than global.",
+    "sourceIds": ["apyx-terms"],
+    "asOf": "2026-08-10",
+    "status": "verified",
+    "confidence": "high",
+    "factOrInference": "fact",
+    "notes": "Context: restrictions apply under current Site and Protocol Terms and may change; consult the complete current list."
+  },
+  {
+    "id": "audit-scope-boundary",
+    "claim": "Apyx links 5 assessments; the June 2026 Halborn review covered 2 named EVM contracts and excluded third-party dependencies, economic attacks and later changes, so it does not establish system-wide or Solana assurance.",
+    "sourceIds": [
+      "apyx-audits-index",
+      "halborn-apyx-2026-06",
+      "apyx-contract-addresses"
+    ],
+    "asOf": "2026-08-10",
+    "status": "verified",
+    "confidence": "high",
+    "factOrInference": "interpretation",
+    "notes": "Units/context: 5 reports in the official index; 2 Solidity files in the Halborn scope. Assessed commit ff15937; remediation commit 35fa118. Remaining reports still require individual scope mapping."
+  },
+  {
+    "id": "author-experience",
+    "claim": "Juan Torchia has 20 years of professional IT and software-architecture experience.",
+    "sourceIds": ["juan-linkedin"],
+    "asOf": "2026-08-10",
+    "status": "verified",
+    "confidence": "high",
+    "factOrInference": "fact",
+    "notes": "Unit: years. Context: author biography and professional profile; used as first-person voice, not product authority."
   }
 ]

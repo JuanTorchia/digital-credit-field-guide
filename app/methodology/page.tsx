@@ -3,7 +3,7 @@ export const metadata = { title: 'Methodology' };
 export default function Methodology() {
   return (
     <main id="main" className="container py-16">
-      <p className="label text-[#b84f2c]">METHOD / VERSION 1.0</p>
+      <p className="label text-[#b84f2c]">METHOD / VERSION 2.0</p>
       <h1 className="display mt-6 max-w-5xl text-[clamp(4rem,10vw,8rem)]">
         Evidence before narrative.
       </h1>
@@ -44,8 +44,8 @@ export default function Methodology() {
             </li>
             <li>
               <strong>Reject unsupported certainty.</strong> No promise
-              language, no current APY/TVL/supply, no audit implication and no
-              Solana availability claim while evidence conflicts.
+              language, no current APY/TVL/supply and no system-wide assurance
+              inferred from a scoped audit or deployed token mint.
             </li>
           </ol>
           <h2>Limitations</h2>
@@ -55,6 +55,15 @@ export default function Methodology() {
             verified as statements made in its documentation, not as independent
             operational performance. Readers should inspect current terms and
             jurisdictional access.
+          </p>
+          <h2>Solana verification boundary</h2>
+          <p>
+            A finalized RPC snapshot records each published mint&apos;s token
+            program, decimals and authority configuration. The request, slot,
+            parsed response and limitations are committed in the repository.
+            This confirms mint state at that slot—not reserves, liquidity,
+            bridge behavior, control identity or the location of economic
+            accounting.
           </p>
           <h2>Model policy</h2>
           <p>

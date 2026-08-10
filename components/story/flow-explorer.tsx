@@ -24,7 +24,7 @@ const steps = [
   {
     name: 'User',
     detail:
-      'A token balance exposes the user to the wrapper’s liquidity, contract and regulatory conditions.',
+      'The Terms describe a programmatic claim against a protocol module—not direct ownership of the preferred shares. Access and remedies depend on jurisdiction.',
   },
 ];
 export function FlowExplorer() {

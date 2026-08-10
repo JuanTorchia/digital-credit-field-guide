@@ -77,10 +77,10 @@ export default function Page() {
             <strong>
               Digital Credit is not “credit without intermediaries.”
             </strong>{' '}
-            In this guide it means publicly traded preferred equity issued by
+            Apyx uses the term for publicly traded preferred equity issued by
             digital-asset treasury companies, with credit-like cash flows,
-            connected to onchain rails. That is a narrow working definition—not
-            a new legal category.
+            connected to onchain rails. That is its product framing—not a
+            universal legal category.
           </p>
         </section>
         <section>
@@ -117,6 +117,15 @@ export default function Page() {
             secondary liquidity. Transparency at one boundary is useful; it does
             not remove the others.
           </p>
+          <aside className="my-10 border-l-4 border-[#b84f2c] bg-white p-6">
+            <p className="label text-[#b84f2c]">HOLDER-RIGHTS BOUNDARY</p>
+            <p className="mt-3 text-lg leading-relaxed">
+              Apyx&apos;s Terms describe protocol-generated tokens as
+              programmatic claims against modules holding assets—not claims
+              against a particular company or person. Holding the token is not
+              direct ownership of STRC or SATA.
+            </p>
+          </aside>
         </section>
         <section aria-labelledby="compare-title">
           <p className="label text-[#b84f2c]">
@@ -180,16 +189,37 @@ export default function Page() {
             event; governance economics are a separate layer and do not prove
             the quality of the underlying credit.
           </p>
+          <p>
+            Access is not global. Under the current Terms, people connected to
+            the United States, European Union, United Kingdom, Canada and other
+            listed territories may not use the Site or Protocol. Any claim of
+            broader access therefore needs a jurisdiction and an evidence date.
+          </p>
           <div className="my-10 border border-[#b84f2c] p-6">
             <p className="label text-[#b84f2c]">SOLANA / VERIFIED BOUNDARY</p>
             <p className="mt-3">
-              Apyx publishes Solana mint addresses for apxUSD and apyUSD. Both
-              returned initialized SPL Token mint accounts on mainnet when
-              queried on August 10. This verifies token deployment—not
-              liquidity, frontend availability, bridge safety or the offchain
-              reserves.
+              At finalized slot 438320962, both published addresses returned
+              initialized classic SPL Token mint accounts with six decimals.
+              Both retained mint and freeze authorities. Those are controls to
+              identify and monitor, not evidence of misuse.
+            </p>
+            <p className="mt-3">
+              This verifies token representation and authority configuration at
+              one slot—not reserves, legitimate supply, liquidity, frontend
+              availability, bridge safety, redemption behavior or where the
+              complete accounting runs. The RPC request and response are saved
+              in the public repository.
             </p>
           </div>
+          <h3>What Solana contributes</h3>
+          <p>
+            Solana provides standard mint, token-account, transfer and authority
+            primitives. They can make a balance portable, publicly inspectable
+            and available to compatible programs. They do not determine the
+            offchain asset&apos;s legal rights or the issuer&apos;s capacity to
+            pay. The useful question is which part runs on Solana, who controls
+            it and which dependencies remain elsewhere.
+          </p>
         </section>
         <RiskLens />
         <section>
@@ -249,8 +279,8 @@ export default function Page() {
           <div className="my-20 bg-[#d9ff63] p-7 sm:p-12">
             <p className="label">THE FIELD CHECK</p>
             <p className="display mt-5 text-5xl">
-              Instrument. Issuer. Custody. Wrapper. Liquidity. Jurisdiction.
-              Evidence date.
+              Instrument. Holder rights. Issuer. Custody. Token controls.
+              Liquidity. Jurisdiction. Evidence date.
             </p>
             <div className="mt-8 flex flex-wrap gap-5 text-sm">
               <Link href="/methodology" className="font-semibold">

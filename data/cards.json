@@ -2,43 +2,50 @@
   {
     "id": "01-thesis",
     "eyebrow": "DIGITAL CREDIT FIELD GUIDE",
-    "title": "Tokenization changes the interface. It does not erase the obligation underneath.",
-    "subtitle": "A systems view of Digital Credit, using Apyx as a documented case study.",
+    "title": "The interface is not the obligation.",
+    "subtitle": "A systems trace of Apyx: preferred shares → protocol modules → Solana token rails.",
     "kind": "thesis"
   },
   {
     "id": "02-definition",
-    "eyebrow": "A WORKING DEFINITION",
-    "title": "Public preferred equity with credit-like cash flows — represented through onchain rails.",
-    "subtitle": "Still equity. Not a deposit. Not a Treasury bill. Not a promise without conditions.",
+    "eyebrow": "APYX'S DIGITAL CREDIT FRAME",
+    "title": "Preferred equity with credit-like cash flows, connected to onchain rails.",
+    "subtitle": "Legally equity. Not a deposit, Treasury bill or new legal category.",
     "kind": "definition"
   },
   {
     "id": "03-flow",
-    "eyebrow": "FOLLOW THE CASH FLOW",
-    "title": "Capital → preferred securities → cash dividends → treasury & custody → onchain vault → user",
-    "subtitle": "Every arrow is both infrastructure and a place where risk can enter.",
+    "eyebrow": "FOLLOW THE SYSTEM",
+    "title": "From listed security to token balance",
+    "subtitle": "The offchain/onchain boundary is a handoff—not a risk eraser.",
     "kind": "flow"
   },
   {
     "id": "04-layers",
     "eyebrow": "TWO CONNECTED RISK LAYERS",
-    "title": "Underlying: issuer, dividend, market, custody. Wrapper: contracts, liquidity, integration, regulation.",
-    "subtitle": "Better visibility into one layer does not neutralize the other.",
+    "title": "One interface, two failure domains",
+    "subtitle": "Inspect the economic obligation and the technical wrapper separately.",
     "kind": "layers"
   },
   {
-    "id": "05-compare",
+    "id": "05-controls",
+    "eyebrow": "SOLANA CONTROL SURFACE",
+    "title": "A mint is evidence—and a boundary.",
+    "subtitle": "Representation is verified. Reserves, liquidity and the full accounting path are separate questions.",
+    "kind": "controls"
+  },
+  {
+    "id": "06-compare",
     "eyebrow": "COMPARE THE OBLIGATION",
-    "title": "Deposit · Treasury · preferred equity · DeFi strategy",
-    "subtitle": "Ask who owes what, what can change, how you exit, and which rules govern the claim.",
+    "title": "Four instruments, different promises",
+    "subtitle": "Start with who owes what, then inspect the wrapper and exit path.",
     "kind": "compare"
   },
   {
-    "id": "06-checklist",
+    "id": "07-checklist",
     "eyebrow": "THE FIELD CHECK",
-    "title": "Instrument. Issuer. Custody. Wrapper. Liquidity. Jurisdiction. Evidence date.",
-    "subtitle": "If one is missing, the yield number is not yet an explanation.",
+    "title": "Eight questions before one yield number",
+    "subtitle": "Instrument · rights · issuer · custody · controls · liquidity · jurisdiction · date",
     "kind": "checklist"
   }
 ]

@@ -6,7 +6,7 @@ Digital Credit matters when digital rails make a financial obligation easier to 
 
 ## A working definition
 
-In this guide, **Digital Credit** means publicly traded preferred equity issued by digital-asset treasury companies, with credit-like cash flows, connected to onchain rails. This is an editorial definition, not a universal legal classification.
+In Apyx's framing, **Digital Credit** means publicly traded preferred equity issued by digital-asset treasury companies, with credit-like cash flows, connected to onchain rails. This is a product category used in this case study, not a universal legal classification.
 
 Preferred equity is still equity. It sits below debt and above common stock. Perpetual means the instrument has no maturity date. Neither term makes a dividend unavoidable or a market price fixed.
 
@@ -20,6 +20,8 @@ Apyx documents an offchain treasury that acquires preferred securities and liqui
 
 This is a description of the project’s published design. It is not an independent reserve audit or a performance claim.
 
+The legal handoff is as important as the technical one. Apyx's controlling Terms describe apxUSD and apyUSD as programmatic claims against protocol modules holding assets—not claims against a particular company or person. A token holder therefore does not directly own STRC or SATA through the token. Access is also jurisdiction-dependent: the current Terms restrict the United States, European Union, United Kingdom, Canada and other listed territories.
+
 ## The hard question
 
 If an eligible investor can buy a preferred security through a broker, why add a protocol? The answer must be demonstrated through broader useful access, programmable distribution, better evidence and integrations that justify the new wrapper risks and costs.
@@ -30,4 +32,10 @@ Repeated independent attestations tied to liabilities, clear holder rights, deep
 
 ## Solana boundary
 
-Apyx publishes Solana mint addresses for apxUSD and apyUSD. Both resolve as initialized SPL Token mint accounts on mainnet. That verifies deployed token rails; it does not establish liquidity, bridge safety, frontend access or reserve quality.
+Apyx publishes Solana mint addresses for apxUSD and apyUSD. At finalized slot 438320962, both resolved as initialized classic SPL Token mint accounts with six decimals. Both retained mint and freeze authorities. Those authorities are controls to identify and monitor; their presence is not evidence of misuse.
+
+This snapshot verifies token representation and visible authority configuration. It does not establish reserves, legitimate circulating supply, liquidity, bridge safety, frontend access, redemption behavior or where the complete economic accounting runs. The request, raw response and limitations are stored with the source ledger.
+
+## What Solana contributes
+
+Solana supplies standard token primitives: mint accounts, token accounts, transfers and explicit authority roles. Those rails can make a balance portable between compatible wallets, publicly inspectable and available as a program input. They do not determine the offchain asset's legal rights or payment capacity. In this case, the useful question is not simply “is it on Solana?” but “which part is on Solana, who controls it, and which dependencies remain elsewhere?”

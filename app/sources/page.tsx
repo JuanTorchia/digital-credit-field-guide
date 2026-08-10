@@ -1,5 +1,6 @@
 import sources from '@/data/sources.json';
 import claims from '@/data/claims.json';
+import { EmptyState } from '@/components/content/empty-state';
 export const metadata = { title: 'Sources' };
 export default function Sources() {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
@@ -41,9 +42,7 @@ export default function Sources() {
         </h2>
         <div className="mt-5 space-y-3">
           {claims.length === 0 && (
-            <p className="border border-[#c9c7bd] p-5 text-[#596159]">
-              No claims are available in this build.
-            </p>
+            <EmptyState>No claims are available in this build.</EmptyState>
           )}
           {claims.map((c) => (
             <details
@@ -106,9 +105,7 @@ export default function Sources() {
         </h2>
         <div className="mt-5 grid gap-3 sm:grid-cols-2">
           {sources.length === 0 && (
-            <p className="border border-[#c9c7bd] p-5 text-[#596159]">
-              No sources are available in this build.
-            </p>
+            <EmptyState>No sources are available in this build.</EmptyState>
           )}
           {sources.map((s) => (
             <article

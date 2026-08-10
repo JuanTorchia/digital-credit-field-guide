@@ -32,6 +32,6 @@ Audited: 2026-08-10 UTC. Statuses: `proven`, `incomplete`, `contradictory`, `no 
 | Demo script 60–90 seconds                               | Medium   | Script + `public/demo`              | Timed 75s storyboard; five production-export captures        | proven     |
 | Exact Superteam copy                                    | High     | `docs/submission-copy.md`           | URLs included; X URL intentionally pending                   | proven     |
 | CI: format/lint/types/tests/content/build/e2e/axe/links | Critical | GitHub workflow and local QA        | `pnpm verify`; 4 unit + 18 desktop/mobile browser tests      | proven     |
-| Loading/error/empty states                              | Medium   | Route boundaries/source UI          | Loading/error exist; explicit empty-state test remains       | incomplete |
+| Loading/error/empty states                              | Medium   | Route boundaries/source UI          | Three focused boundary-state tests                           | proven     |
 | Lighthouse at least 90 in four categories               | High     | Public QA record                    | v2 public scores: 96/100/96/100                              | proven     |
 | No automatic publish, submit, spend or finance          | Gate     | Process controls                    | No prohibited operation performed                            | proven     |

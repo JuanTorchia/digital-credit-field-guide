@@ -2,6 +2,7 @@ import Image from 'next/image';
 import cards from '@/data/cards.json';
 export const metadata = { title: 'Social cards' };
 export default function Share() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
   return (
     <main id="main" className="container py-16">
       <p className="label text-[#b84f2c]">SHARE KIT / 1600 × 900</p>
@@ -16,7 +17,7 @@ export default function Share() {
         {cards.map((card, index) => (
           <figure key={card.id}>
             <Image
-              src={`/social/${card.id}.png`}
+              src={`${basePath}/social/${card.id}.png`}
               alt={`${card.eyebrow}: ${card.title}`}
               width={1600}
               height={900}

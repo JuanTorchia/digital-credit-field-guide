@@ -1,7 +1,7 @@
 # Bounty specification — Why Digital Credit Matters
 
 - Official URL: https://superteam.fun/earn/listing/why-digital-credit-matters
-- Consulted: 2026-08-10 (UTC)
+- Consulted: 2026-08-10 (UTC); rechecked after X publication on the same date
 - Listing ID: `6c1a670c-db65-4c0d-ae24-1ed87ee1e332`
 - Sponsor: Apyx / Apyx Foundation
 - Listing type: bounty
@@ -10,7 +10,7 @@
 - Published: `2026-08-07T13:06:37.100Z`
 - Deadline: `2026-08-27T06:59:59.999Z`
 - Winner announcement scheduled: `2026-09-01T06:59:59.000Z`
-- Current submissions at consultation: **44**
+- Current submissions at latest consultation: **47**
 - Access field: `HUMAN_ONLY`
 - Listing-specific eligibility: none published (`eligibility: null`)
 - Listing-specific requirements/KYC: none published (`requirements: null`)
@@ -95,7 +95,7 @@ A total prize pool of **$2,000 USDC** will be awarded based on quality, creativi
 
 ## Gate decision
 
-**PASS as of 2026-08-10 UTC.** The listing is open and global; no listing-specific eligibility or KYC restriction is published; the deadline leaves more than four useful days. Juan’s publication and final submission must be performed by a human because the listing requires an original published X thread and marks access as `HUMAN_ONLY`.
+**PASS as of the post-publication recheck on 2026-08-10 UTC.** The listing is open and global; no listing-specific eligibility or KYC restriction is published; the deadline leaves more than four useful days. The original X thread is now published from `@Juanchi_AR`. Final submission remains a human gate because the listing marks access as `HUMAN_ONLY`.
 
 The mandatory bounty deliverable is the published X thread. The field guide, long-form article, cards, methodology, repository and demo are complementary evidence and do not replace it.
 

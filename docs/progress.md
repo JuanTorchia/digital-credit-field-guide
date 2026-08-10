@@ -21,6 +21,12 @@ Last updated: 2026-08-10 UTC
   91/100 editorial scores with no factual blocker.
 - 2026-08-10: Remote CI and Pages deployment passed. Public Lighthouse v2:
   96 Performance, 100 Accessibility, 96 Best Practices, 100 SEO.
+- 2026-08-10: Human voice pass promoted to the canonical thread after Juan's
+  line-by-line approval; publication remains a human-only action.
+- 2026-08-10: Long-form duplication removed. `app/page.tsx` now owns only the
+  page shell and imports the complete narrative from `content/report.mdx`.
+  Typecheck, build, content validation and 10 desktop/mobile Playwright checks
+  pass without hydration errors.
 
 ## Gate log
 

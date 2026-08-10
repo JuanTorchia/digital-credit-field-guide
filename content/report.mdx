@@ -1,41 +1,226 @@
-# Digital Credit Field Guide
+import Link from 'next/link';
+import { FlowExplorer } from '@/components/story/flow-explorer';
+import { YieldWaterfall } from '@/components/calculators/yield-waterfall';
+import { RiskLens } from '@/components/story/risk-lens';
 
-> Tokenization changes the interface. It does not erase the obligation underneath.
+<section>
+  <p className="label text-[#b84f2c]">ACT I / THE PROBLEM</p>
 
-Digital Credit matters when digital rails make a financial obligation easier to access, inspect, distribute and use in software. It fails as an explanation when “onchain” is treated as a substitute for underwriting.
+## Credit runs on agreements. Access runs on fragmented systems.
 
-## A working definition
+Credit is not merely money moving. It is a chain of promises: who provides capital, who owes cash flows, which conditions govern payment, where the asset sits and how a holder exits. Traditional infrastructure can make those promises slow to distribute and difficult to compose with software.
 
-In Apyx's framing, **Digital Credit** means publicly traded preferred equity issued by digital-asset treasury companies, with credit-like cash flows, connected to onchain rails. This is a product category used in this case study, not a universal legal classification.
+**Digital Credit is not “credit without intermediaries.”** Apyx uses the term for publicly traded preferred equity issued by digital-asset treasury companies, with credit-like cash flows, connected to onchain rails. That is its product framing—not a universal legal category.
 
-Preferred equity is still equity. It sits below debt and above common stock. Perpetual means the instrument has no maturity date. Neither term makes a dividend unavoidable or a market price fixed.
+</section>
 
-## The two-layer model
+<section>
+  <p className="label text-[#b84f2c]">ACT II / WHAT CHANGES</p>
 
-The underlying layer contains issuer, dividend, market and custody risk. The wrapper layer contains smart-contract, liquidity, integration, operational and regulatory risk. A transparent wrapper can help a reader see the underlying; it cannot repair it.
+## Digital rails change behavior, not seniority.
 
-## Apyx as a documented case
+A token balance can be transferred, inspected and called by programs. Distribution logic can be encoded. Evidence can be attached to an interface. But the token does not strengthen its issuer, compel a board to declare a dividend, insure a custodian or create buyers during stress.
 
-Apyx documents an offchain treasury that acquires preferred securities and liquid assets. It names Strategy’s STRC and Strive’s SATA as initial examples. Cash dividends are collected offchain and value is moved to an onchain vault, where apyUSD’s redemption value changes over time.
+<aside className="my-10 border-l-4 border-[#b84f2c] bg-white p-6 text-xl leading-relaxed">
+  <strong>Key distinction:</strong> the underlying asset and the wrapper are
+  connected, but they are not the same risk.
+</aside>
 
-This is a description of the project’s published design. It is not an independent reserve audit or a performance claim.
+</section>
 
-The legal handoff is as important as the technical one. Apyx's controlling Terms describe apxUSD and apyUSD as programmatic claims against protocol modules holding assets—not claims against a particular company or person. A token holder therefore does not directly own STRC or SATA through the token. Access is also jurisdiction-dependent: the current Terms restrict the United States, European Union, United Kingdom, Canada and other listed territories.
+<FlowExplorer />
 
-## The hard question
+<section>
+  <p className="label text-[#b84f2c]">ACT III / FOLLOW THE VALUE</p>
 
-If an eligible investor can buy a preferred security through a broker, why add a protocol? The answer must be demonstrated through broader useful access, programmable distribution, better evidence and integrations that justify the new wrapper risks and costs.
+## The cash flow crosses a boundary the blockchain cannot settle alone.
 
-## What would change my mind
+Apyx documents an offchain treasury that acquires preferred securities and liquid assets, receives cash dividends, and moves value to an onchain vault. The vault changes apyUSD’s redemption value over time. This is a documented architecture claim, not independent proof of performance.
 
-Repeated independent attestations tied to liabilities, clear holder rights, deep two-way liquidity under stress, published contract audits and stable redemption behavior would strengthen the case. Stale evidence, reserve gaps, ambiguous claims, persistent discounts or conflicting documentation would weaken it.
+The system therefore depends on public-market issuers, brokerage and custody operations, accounting evidence, token contracts and secondary liquidity. Transparency at one boundary is useful; it does not remove the others.
 
-## Solana boundary
+<aside className="my-10 border-l-4 border-[#b84f2c] bg-white p-6">
+  <p className="label text-[#b84f2c]">HOLDER-RIGHTS BOUNDARY</p>
+  <p className="mt-3 text-lg leading-relaxed">
+    {
+      "Apyx's Terms describe protocol-generated tokens as programmatic claims against modules holding assets—not claims against a particular company or person. Holding the token is not direct ownership of STRC or SATA."
+    }
+  </p>
+</aside>
 
-Apyx publishes Solana mint addresses for apxUSD and apyUSD. At finalized slot 438320962, both resolved as initialized classic SPL Token mint accounts with six decimals. Both retained mint and freeze authorities. Those authorities are controls to identify and monitor; their presence is not evidence of misuse.
+</section>
 
-This snapshot verifies token representation and visible authority configuration. It does not establish reserves, legitimate circulating supply, liquidity, bridge safety, frontend access, redemption behavior or where the complete economic accounting runs. The request, raw response and limitations are stored with the source ledger.
+<section aria-labelledby="compare-title">
+  <p className="label text-[#b84f2c]">ACT IV / RESPONSIBLE COMPARISON</p>
 
-## What Solana contributes
+<h2 id="compare-title">Compare the obligation before the rate.</h2>
 
-Solana supplies standard token primitives: mint accounts, token accounts, transfers and explicit authority roles. Those rails can make a balance portable between compatible wallets, publicly inspectable and available as a program input. They do not determine the offchain asset's legal rights or payment capacity. In this case, the useful question is not simply “is it on Solana?” but “which part is on Solana, who controls it, and which dependencies remain elsewhere?”
+<div
+  className="my-10 overflow-x-auto"
+  tabIndex={0}
+  role="region"
+  aria-label="Comparison table; scroll horizontally on small screens"
+>
+  <table className="w-full min-w-[760px] border-collapse text-left">
+    <thead>
+      <tr className="border-b-2 border-[#172019]">
+        <th className="p-4 text-sm">Instrument</th>
+        <th className="p-4 text-sm">Economic source</th>
+        <th className="p-4 text-sm">Access rail</th>
+        <th className="p-4 text-sm">Risks to inspect</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr className="border-b border-[#c9c7bd]">
+        <td className="p-4 align-top font-semibold">Bank deposit</td>
+        <td className="p-4 align-top text-[#596159]">Bank obligation</td>
+        <td className="p-4 align-top text-[#596159]">Account/transfer rails</td>
+        <td className="p-4 align-top text-[#596159]">
+          Bank, insurance limits, access
+        </td>
+      </tr>
+      <tr className="border-b border-[#c9c7bd]">
+        <td className="p-4 align-top font-semibold">Treasury bill</td>
+        <td className="p-4 align-top text-[#596159]">Sovereign obligation</td>
+        <td className="p-4 align-top text-[#596159]">Broker/token wrapper</td>
+        <td className="p-4 align-top text-[#596159]">
+          Rate, duration, custody, wrapper
+        </td>
+      </tr>
+      <tr className="border-b border-[#c9c7bd]">
+        <td className="p-4 align-top font-semibold">DAT preferred</td>
+        <td className="p-4 align-top text-[#596159]">
+          Corporate preferred equity
+        </td>
+        <td className="p-4 align-top text-[#596159]">Broker/token wrapper</td>
+        <td className="p-4 align-top text-[#596159]">
+          Issuer, dividend, market, liquidity
+        </td>
+      </tr>
+      <tr className="border-b border-[#c9c7bd]">
+        <td className="p-4 align-top font-semibold">DeFi strategy</td>
+        <td className="p-4 align-top text-[#596159]">Protocol positions</td>
+        <td className="p-4 align-top text-[#596159]">Smart contracts</td>
+        <td className="p-4 align-top text-[#596159]">
+          Contracts, oracle, liquidity, strategy
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</section>
+
+<YieldWaterfall />
+
+<section>
+  <p className="label text-[#b84f2c]">ACT V / APYX AS A CASE STUDY</p>
+
+## Apyx exposes the hybrid system in plain sight.
+
+Its documentation names STRC from Strategy and SATA from Strive as initial preferred instruments. SEC filings identify both as Nasdaq-listed variable-rate perpetual preferred equity. Preferred equity generally ranks below debt and above common equity, but the exact rights belong to each instrument's terms. “Perpetual” means no maturity date. Neither label means the market price or dividend cannot change.
+
+Apyx also states that apxUSD is not designed as a strict one-to-one peg. That disclosure is central, not fine print. The project’s docs describe $APYX as a governance token with a future token-generation event; governance economics are a separate layer and do not prove the quality of the underlying credit.
+
+Access is not global. Under the current Terms, people connected to the United States, European Union, United Kingdom, Canada and other listed territories may not use the Site or Protocol. Any claim of broader access therefore needs a jurisdiction and an evidence date.
+
+<div className="my-10 border border-[#b84f2c] p-6">
+  <p className="label text-[#b84f2c]">SOLANA / VERIFIED BOUNDARY</p>
+  <p className="mt-3">
+    {
+      'At finalized slot 438320962, both published addresses returned initialized classic SPL Token mint accounts with six decimals. Both retained mint and freeze authorities. Those are controls to identify and monitor, not evidence of misuse.'
+    }
+  </p>
+  <p className="mt-3">
+    {
+      'This verifies token representation and authority configuration at one slot—not reserves, legitimate supply, liquidity, frontend availability, bridge safety, redemption behavior or where the complete accounting runs. The RPC request and response are saved in the public repository.'
+    }
+  </p>
+</div>
+
+### What Solana contributes
+
+Solana provides standard mint, token-account, transfer and authority primitives. They can make a balance portable, publicly inspectable and available to compatible programs. They do not determine the offchain asset's legal rights or the issuer's capacity to pay. The useful question is which part runs on Solana, who controls it and which dependencies remain elsewhere.
+
+</section>
+
+<RiskLens />
+
+<section>
+  <p className="label text-[#b84f2c]">ACT VI / THE TEST</p>
+
+## Programmability is useful. Proof remains offchain and onchain.
+
+### The strongest counterargument
+
+Why add a protocol if an eligible investor can buy preferred shares through a broker? The wrapper adds custody, contract, liquidity, operational and regulatory surfaces. The practical test is whether access, denomination, distribution, transparency or programmatic use justify those additional surfaces. That remains something to demonstrate over time.
+
+### What would change my mind
+
+I would become more positive with reserves independently tied to token supply, repeated attestations, clear legal mapping, durable two-way liquidity during stress, published audits and incidents, and stable redemption behavior across regimes. Reserve gaps, stale evidence, ambiguous rights, persistent discounts or documentation that diverges from production would move me the other way.
+
+### A compact glossary
+
+<dl className="grid gap-x-8 border-t border-[#c9c7bd] sm:grid-cols-[12rem_1fr]">
+  <div className="contents">
+    <dt className="border-b border-[#c9c7bd] py-4 font-semibold">
+      Preferred equity
+    </dt>
+    <dd className="m-0 border-b border-[#c9c7bd] py-4 text-[#596159]">
+      Equity with contractual preferences over common stock; still junior to
+      debt.
+    </dd>
+  </div>
+  <div className="contents">
+    <dt className="border-b border-[#c9c7bd] py-4 font-semibold">Perpetual</dt>
+    <dd className="m-0 border-b border-[#c9c7bd] py-4 text-[#596159]">
+      No stated maturity date.
+    </dd>
+  </div>
+  <div className="contents">
+    <dt className="border-b border-[#c9c7bd] py-4 font-semibold">Wrapper</dt>
+    <dd className="m-0 border-b border-[#c9c7bd] py-4 text-[#596159]">
+      The token, contracts and operations that represent or route exposure to an
+      underlying asset.
+    </dd>
+  </div>
+  <div className="contents">
+    <dt className="border-b border-[#c9c7bd] py-4 font-semibold">
+      Redemption value
+    </dt>
+    <dd className="m-0 border-b border-[#c9c7bd] py-4 text-[#596159]">
+      The protocol-defined amount used for minting/redemption; not necessarily a
+      market price.
+    </dd>
+  </div>
+  <div className="contents">
+    <dt className="border-b border-[#c9c7bd] py-4 font-semibold">
+      Composability
+    </dt>
+    <dd className="m-0 border-b border-[#c9c7bd] py-4 text-[#596159]">
+      The ability for programs to use a token or protocol as a building block.
+    </dd>
+  </div>
+</dl>
+
+<div className="my-20 bg-[#d9ff63] p-7 sm:p-12">
+  <p className="label">THE FIELD CHECK</p>
+  <p className="display mt-5 text-5xl">
+    {
+      'Instrument. Holder rights. Issuer. Custody. Token controls. Liquidity. Jurisdiction. Evidence date.'
+    }
+  </p>
+  <div className="mt-8 flex flex-wrap gap-5 text-sm">
+    <Link href="/methodology" className="font-semibold">
+      Read the methodology →
+    </Link>
+    <Link href="/sources" className="font-semibold">
+      Open the source ledger →
+    </Link>
+    <Link href="/share" className="font-semibold">
+      View the social cards →
+    </Link>
+  </div>
+</div>
+
+</section>

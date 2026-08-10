@@ -23,7 +23,7 @@ Audited: 2026-08-10 UTC. Statuses: `proven`, `incomplete`, `contradictory`, `no 
 | Five to seven deterministic social cards                | High     | `data/cards.json`, `public/social`  | Seven 1600×900 PNGs; render and visual inspection pass       | proven     |
 | Two to four visuals in first six posts                  | High     | Thread posts 1, 2, 4 and 6          | Four explicit visual references                              | proven     |
 | Premium mobile-first microsite                          | High     | Next.js app                         | Public browser check; no overflow; Playwright desktop/mobile | proven     |
-| Long-form MDX, methodology and sources                  | Critical | Content and routes                  | Static build and browser route checks                        | proven     |
+| Long-form MDX, methodology and sources                  | Critical | `content/report.mdx` and routes     | Home imports the MDX directly; static build + browser checks | proven     |
 | Public preview and repository                           | Critical | GitHub Pages and GitHub             | Deployment and links verified at commit `35cb2bc`            | proven     |
 | Reproducible source/claim ledger                        | Critical | JSON, RPC snapshot, scope ledger    | 15/15 links; finalized request/response retained             | proven     |
 | Demo script 60–90 seconds                               | Medium   | `docs/demo-script.md`               | Timed 75-second storyboard                                   | proven     |

@@ -31,6 +31,10 @@ Last updated: 2026-08-10 UTC
   system trace. Every step exposes its ledger claim, primary evidence, domain,
   evidentiary limit and evidence date. Pointer and arrow-key navigation pass on
   desktop and mobile.
+- 2026-08-10: Rebuilt cards 01, 02 and 07 as information graphics rather than
+  typographic plates. A blind design pass scored the complete set about 90/100
+  (previous estimate: 82/100), with no visual or contrast blocker. Card 07 was
+  then widened to a 2×4 question grid for better timeline legibility.
 
 ## Gate log
 

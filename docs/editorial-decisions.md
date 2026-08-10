@@ -40,3 +40,13 @@ hook, attributes the category to Apyx, adds holder rights and jurisdiction, and
 makes the Solana control surface reproducible. Three typographic cards became
 actual diagrams. `$APYX` now appears beside governance and holder-rights
 boundaries instead of as a final-post compliance insertion.
+
+## Visual revision — evidence before decoration
+
+A blind design audit found that cards 01, 02 and 07 still behaved like polished
+quote cards. They now carry the argument themselves: 01 maps underlying,
+protocol and token rail; 02 separates legal form, economic behavior and digital
+rail; 07 exposes the complete eight-question field check. The renderer reads
+all variable copy from `data/cards.json`; no decorative generated imagery is
+used. The follow-up audit scored the full set about 90/100, up from an estimated
+82/100, with no contrast or hierarchy blocker.

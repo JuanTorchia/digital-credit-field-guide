@@ -21,7 +21,7 @@ Audited: 2026-08-10 UTC. Statuses: `proven`, `incomplete`, `contradictory`, `no 
 | Holder rights and jurisdiction visible                  | Critical | Thread 8–9, report, claims          | Controlling Terms mapped and dated                           | proven     |
 | Market, liquidity, counterparty, contracts, regulation  | Critical | Risk Lens and article               | Five categories rendered and axe-tested                      | proven     |
 | “What would change my mind”                             | High     | Report and research notes           | Dedicated section                                            | proven     |
-| Five to seven deterministic social cards                | High     | `data/cards.json`, `public/social`  | Seven 1600×900 PNGs; render and visual inspection pass       | proven     |
+| Five to seven deterministic social cards                | High     | `data/cards.json`, `public/social`  | Seven 1600×900 PNGs; blind design audit ≈90/100              | proven     |
 | Two to four visuals in first six posts                  | High     | Thread posts 1, 2, 4 and 6          | Four explicit visual references                              | proven     |
 | Premium mobile-first microsite                          | High     | Next.js app                         | Public browser check; no overflow; Playwright desktop/mobile | proven     |
 | Long-form MDX, methodology and sources                  | Critical | `content/report.mdx` and routes     | Home imports the MDX directly; static build + browser checks | proven     |

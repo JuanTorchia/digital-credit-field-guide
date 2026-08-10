@@ -4,14 +4,50 @@
     "eyebrow": "DIGITAL CREDIT FIELD GUIDE",
     "title": "The interface is not the obligation.",
     "subtitle": "A systems trace of Apyx: preferred shares → protocol modules → Solana token rails.",
-    "kind": "thesis"
+    "kind": "thesis",
+    "panels": [
+      {
+        "label": "UNDERLYING",
+        "value": "Listed preferred equity",
+        "note": "issuer · dividend · market"
+      },
+      {
+        "label": "PROTOCOL",
+        "value": "Treasury + modules",
+        "note": "custody · accounting · claims"
+      },
+      {
+        "label": "TOKEN RAIL",
+        "value": "Solana representation",
+        "note": "mint · authorities · integrations"
+      }
+    ],
+    "callout": "Trace question: when credit moves onchain, which part actually moved?"
   },
   {
     "id": "02-definition",
     "eyebrow": "A WORKING DEFINITION",
     "title": "Preferred equity with credit-like cash flows, connected to onchain rails.",
     "subtitle": "Legally equity. Not a deposit, Treasury bill or new legal category.",
-    "kind": "definition"
+    "kind": "definition",
+    "panels": [
+      {
+        "label": "LEGAL FORM",
+        "value": "Preferred equity",
+        "note": "Rights come from each instrument's terms."
+      },
+      {
+        "label": "ECONOMIC BEHAVIOR",
+        "value": "Credit-like cash flow",
+        "note": "Dividends may change or not be declared."
+      },
+      {
+        "label": "DIGITAL RAIL",
+        "value": "Token + programs",
+        "note": "Programmability does not change seniority."
+      }
+    ],
+    "callout": "Apyx's framing—not a universal legal category."
   },
   {
     "id": "03-flow",
@@ -46,6 +82,17 @@
     "eyebrow": "THE FIELD CHECK",
     "title": "Eight questions before one yield number",
     "subtitle": "Instrument · rights · issuer · custody · controls · liquidity · jurisdiction · date",
-    "kind": "checklist"
+    "kind": "checklist",
+    "items": [
+      "What is the instrument?",
+      "What rights does it grant?",
+      "Who owes the cash flow?",
+      "Where are assets held?",
+      "Who controls the token?",
+      "How does a holder exit?",
+      "Who may legally access it?",
+      "How current is the evidence?"
+    ],
+    "callout": "If one answer is missing, the quoted rate is not the whole story."
   }
 ]

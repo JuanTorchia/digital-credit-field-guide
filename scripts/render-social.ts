@@ -8,6 +8,9 @@ type Card = {
   title: string;
   subtitle: string;
   kind: string;
+  panels?: Array<{ label: string; value: string; note: string }>;
+  items?: string[];
+  callout?: string;
 };
 
 const root = resolve(import.meta.dirname, '..');
@@ -57,6 +60,55 @@ const textLines = (
 const generic = (card: Card) =>
   `${textLines(wrap(card.title), 112, 255, 62, 72, 'Georgia,serif')}
    ${textLines(wrap(card.subtitle, 76), 112, 642, 28, 36)}`;
+
+const thesis = (card: Card) => {
+  const panels = card.panels ?? [];
+  return `${textLines(wrap(card.title, 42), 112, 205, 54, 62, 'Georgia,serif')}
+    ${panels
+      .map((panel, index) => {
+        const x = 112 + index * 460;
+        return `<rect x="${x}" y="350" width="410" height="210" rx="8" fill="${index === 2 ? '#d9ff63' : index === 1 ? '#172019' : '#fff'}" stroke="#172019"/>
+          <text x="${x + 28}" y="400" font-family="monospace" font-size="17" letter-spacing="2" fill="${index === 1 ? '#d9ff63' : '#b84f2c'}">${esc(panel.label)}</text>
+          <text x="${x + 28}" y="455" font-family="Georgia,serif" font-size="30" fill="${index === 1 ? '#f4f2ea' : '#172019'}">${esc(panel.value)}</text>
+          <text x="${x + 28}" y="510" font-family="Arial,sans-serif" font-size="19" fill="${index === 1 ? '#d5d8d2' : '#596159'}">${esc(panel.note)}</text>
+          ${index < panels.length - 1 ? `<path d="M${x + 410} 455h50" stroke="#b84f2c" stroke-width="3"/><path d="m${x + 450} 447 10 8-10 8" fill="none" stroke="#b84f2c" stroke-width="3"/>` : ''}`;
+      })
+      .join('')}
+    <text x="112" y="650" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#172019">${esc(card.callout ?? '')}</text>`;
+};
+
+const definition = (card: Card) => {
+  const panels = card.panels ?? [];
+  return `${textLines(wrap(card.title, 58), 112, 190, 42, 50, 'Georgia,serif')}
+    ${panels
+      .map((panel, index) => {
+        const x = 112 + index * 460;
+        return `<rect x="${x}" y="330" width="420" height="250" rx="8" fill="${index === 1 ? '#fff' : '#e9e7de'}" stroke="#172019"/>
+          <text x="${x + 26}" y="380" font-family="monospace" font-size="17" letter-spacing="2" fill="#b84f2c">${esc(panel.label)}</text>
+          <text x="${x + 26}" y="440" font-family="Georgia,serif" font-size="31" fill="#172019">${esc(panel.value)}</text>
+          ${textLines(wrap(panel.note, 34), x + 26, 496, 19, 27)}`;
+      })
+      .join('')}
+    <rect x="112" y="620" width="1340" height="58" fill="#172019"/>
+    <text x="138" y="658" font-family="Arial,sans-serif" font-size="23" fill="#f4f2ea">${esc(card.callout ?? '')}</text>`;
+};
+
+const checklist = (card: Card) => {
+  const items = card.items ?? [];
+  return `${textLines(wrap(card.title, 48), 112, 190, 46, 54, 'Georgia,serif')}
+    ${items
+      .map((item, index) => {
+        const column = index % 2;
+        const row = Math.floor(index / 2);
+        const x = 112 + column * 690;
+        const y = 285 + row * 86;
+        return `<rect x="${x}" y="${y}" width="660" height="68" rx="6" fill="${row % 2 === 0 ? '#fff' : '#e9e7de'}" stroke="#c9c7bd"/>
+          <text x="${x + 20}" y="${y + 42}" font-family="monospace" font-size="17" fill="#b84f2c">0${index + 1}</text>
+          <text x="${x + 78}" y="${y + 43}" font-family="Arial,sans-serif" font-size="25" fill="#172019">${esc(item)}</text>`;
+      })
+      .join('')}
+    <text x="112" y="680" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#172019">${esc(card.callout ?? '')}</text>`;
+};
 
 const flow = () => {
   const nodes = [
@@ -129,10 +181,13 @@ const compare = () => {
 };
 
 const body = (card: Card) => {
+  if (card.kind === 'thesis') return thesis(card);
+  if (card.kind === 'definition') return definition(card);
   if (card.kind === 'flow') return flow();
   if (card.kind === 'layers') return layers();
   if (card.kind === 'controls') return controls();
   if (card.kind === 'compare') return compare();
+  if (card.kind === 'checklist') return checklist(card);
   return generic(card);
 };
 

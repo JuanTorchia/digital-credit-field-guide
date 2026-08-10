@@ -16,7 +16,7 @@ More negative: unexplained reserve gaps; stale attestations; ambiguous holder ri
 
 ## Open questions
 
-- Is Apyx operationally live on Solana? Obtain current addresses and a user guide.
+- Which frontend and bridge routes expose the verified Solana mints, and in which jurisdictions?
 - Which entity holds each security, and what exact claim does each protocol token grant?
 - Which attestations cover which dates, custodians and liabilities?
 - Which contracts were audited, by whom, at which commit?

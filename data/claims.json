@@ -81,13 +81,17 @@
   },
   {
     "id": "solana-launch",
-    "claim": "Apyx is operationally live on Solana.",
-    "sourceIds": ["superteam-bounty", "apyx-how"],
+    "claim": "Apyx publishes Solana mint addresses for apxUSD and apyUSD, and both resolve as initialized SPL Token mints on Solana mainnet.",
+    "sourceIds": [
+      "superteam-bounty",
+      "apyx-contract-addresses",
+      "solana-token-basics"
+    ],
     "asOf": "2026-08-10",
-    "status": "uncertain",
-    "confidence": "low",
+    "status": "verified",
+    "confidence": "high",
     "factOrInference": "fact",
-    "notes": "Bounty says launched; docs home updated three days earlier says support coming soon. Need contract addresses or coherent official announcement."
+    "notes": "Verified by getMultipleAccounts at Solana mainnet slot 438319427. This establishes token deployment, not liquidity, frontend access or bridge safety."
   },
   {
     "id": "apyx-token-status",

@@ -88,6 +88,17 @@
     "notes": "Identifies SATA and explains per-business-day dividend schedule, if and when declared."
   },
   {
+    "id": "apyx-contract-addresses",
+    "title": "Smart Contract Addresses",
+    "publisher": "Apyx",
+    "url": "https://docs.apyx.fi/resources/smart-contract-addresses",
+    "sourceType": "protocol-documentation",
+    "publishedAt": "2026-08-10",
+    "accessedAt": "2026-08-10",
+    "primary": true,
+    "notes": "Lists apxUSD and apyUSD Solana mint addresses; both were independently queried through Solana mainnet RPC and returned initialized SPL Token mints."
+  },
+  {
     "id": "apyx-token-doc",
     "title": "APYX",
     "publisher": "Apyx",

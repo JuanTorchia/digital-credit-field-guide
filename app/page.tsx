@@ -181,13 +181,13 @@ export default function Page() {
             the quality of the underlying credit.
           </p>
           <div className="my-10 border border-[#b84f2c] p-6">
-            <p className="label text-[#b84f2c]">OPEN EVIDENCE GAP</p>
+            <p className="label text-[#b84f2c]">SOLANA / VERIFIED BOUNDARY</p>
             <p className="mt-3">
-              The Superteam listing says Apyx launched on Solana. Apyx
-              documentation updated three days earlier still says Solana support
-              is coming soon. Until official addresses and a current guide
-              resolve that conflict, this field guide does not claim operational
-              availability on Solana.
+              Apyx publishes Solana mint addresses for apxUSD and apyUSD. Both
+              returned initialized SPL Token mint accounts on mainnet when
+              queried on August 10. This verifies token deployment—not
+              liquidity, frontend availability, bridge safety or the offchain
+              reserves.
             </p>
           </div>
         </section>

@@ -60,9 +60,9 @@ Visual: `04-layers.png`
 
 ## 7/10
 
-@Apyx_Fi is a useful case study because its docs expose the hybrid design: an offchain treasury acquires preferreds and liquid assets; dividends move onchain; a vault changes apyUSD’s redemption value.
+@Apyx_Fi connects an offchain treasury and dividends to an onchain vault. Its published apxUSD and apyUSD Solana addresses resolve as initialized SPL Token mints.
 
-That is the documented design — not a claim that the risks disappear.
+That puts the balances on Solana’s token rails—not the underlying securities.
 
 ## 8/10
 

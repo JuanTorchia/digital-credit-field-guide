@@ -26,12 +26,12 @@ Audited: 2026-08-10 UTC
 | Lighthouse ≥90                        | proven         | Public scores: 98 / 100 / 96 / 100                                     |
 | Public functional URL                 | proven         | GitHub Pages workflow green; browser and assets verified               |
 | Vercel preview                        | incomplete     | Built under team SSO; public GitHub Pages URL is canonical             |
-| Solana launch claim                   | contradictory  | Bounty says launched; near-current Apyx docs say coming soon           |
+| Solana token deployment               | proven         | Official Apyx addresses plus initialized SPL Token mints on mainnet    |
 | Current APY/TVL/supply/volume         | no evidence    | Deliberately excluded; publication-day evidence required               |
-| Contract audit assurance              | no evidence    | No audit report located and reviewed                                   |
+| Contract audit assurance              | incomplete     | Five assessments linked; report scopes still need detailed review      |
 | Published X URL                       | incomplete     | Explicit human action required                                         |
 | Superteam submission                  | incomplete     | Explicit human action required                                         |
 
 ## Remaining uncertainty
 
-The principal factual gap is Solana availability. Before publication, obtain current official program/token addresses and a user guide or revise the copy if Apyx documentation changes. Re-check `$APYX` status, legal restrictions and every protocol document on publication day.
+Solana mint deployment is verified, but frontend paths, liquidity, bridge safety and jurisdictional access remain separate questions. Re-check `$APYX` status, legal restrictions, audit scopes and every protocol document on publication day.

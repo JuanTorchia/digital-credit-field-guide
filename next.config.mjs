@@ -8,5 +8,5 @@ export default withMDX({
   output: 'export',
   trailingSlash: true,
   images: { unoptimized: true },
-  basePath: process.env.GITHUB_ACTIONS ? '/digital-credit-field-guide' : '',
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH ?? '',
 });

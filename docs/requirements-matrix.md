@@ -1,38 +1,34 @@
 # Requirements matrix
 
-Statuses: `proven`, `in progress`, `incomplete`, `contradictory`, `no evidence`.
+Audited: 2026-08-10 UTC. Statuses: `proven`, `incomplete`, `contradictory`, `no evidence`.
 
-| Requirement / criterion                                           | Priority | Satisfying artifact                                    | Objective proof                                                     | Status      |
-| ----------------------------------------------------------------- | -------- | ------------------------------------------------------ | ------------------------------------------------------------------- | ----------- |
-| Listing remains open                                              | Gate     | `docs/bounty-spec.md`                                  | Official page structured data: `status: OPEN`, consulted 2026-08-10 | proven      |
-| Global eligibility                                                | Gate     | `docs/bounty-spec.md`                                  | Official page: `region: Global`, `eligibility: null`                | proven      |
-| At least four useful days remain                                  | Gate     | `docs/bounty-spec.md`                                  | Deadline `2026-08-27T06:59:59.999Z`; consulted 2026-08-10           | proven      |
-| Original educational X thread is mandatory                        | Critical | `content/thread.md`                                    | Final numbered 8–12-post thread and pre-publication checklist       | in progress |
-| Tag `@Apyx_Fi`                                                    | Critical | `content/thread.md`                                    | Exact-string content validation                                     | in progress |
-| Include `$APYX` naturally                                         | Critical | `content/thread.md`                                    | Exact-string content validation and editorial review                | in progress |
-| Human publishes thread and submits                                | Critical | `docs/human-actions.md`                                | Explicit approval gate; no credentials/automation in project        | in progress |
-| Explain Digital Credit and Apyx accurately                        | Critical | Article, thread, claim ledger                          | Every material claim linked to dated primary evidence               | in progress |
-| Educational value                                                 | High     | Six-act field guide, glossary, flow explorer           | Rubric audit plus user-tested hierarchy                             | in progress |
-| Accuracy                                                          | Critical | `data/claims.json`, `data/sources.json`, validator     | `pnpm content:validate` and factual audit pass                      | in progress |
-| Creativity                                                        | High     | Risk-stack framing, source drawer, deterministic cards | Editorial decision log and original design system                   | in progress |
-| Engagement                                                        | High     | Hook selection, concise posts, early visuals           | Hook scorecard; 2–4 visuals in first six posts                      | in progress |
-| Overall quality                                                   | Critical | Entire package                                         | Full CI, visual QA, Lighthouse, deployed preview                    | in progress |
-| No unsupported metrics or financial promises                      | Critical | Validator and copy audit                               | Prohibited-language and numeric-ledger checks pass                  | in progress |
-| Facts / interpretation / inference separated                      | Critical | Claim ledger, methodology                              | Each claim has `factOrInference`; visible methodology legend        | in progress |
-| Asset and wrapper risks distinguished                             | Critical | Risk Lens, article, thread                             | Dedicated comparison and risk-path explanation                      | in progress |
-| Strong counterargument                                            | High     | Article and thread                                     | Dedicated counterargument section with sourced response             | in progress |
-| “What would change my mind” section                               | High     | Article                                                | Visible section and editorial QA                                    | in progress |
-| Market, liquidity, counterparty, smart-contract, regulation risks | Critical | Risk Lens and article                                  | Five visible categories with evidence/context                       | in progress |
-| 5–7 deterministic social cards                                    | High     | `public/social/*`                                      | `pnpm social:render`; dimension/overflow tests                      | in progress |
-| Premium mobile-first microsite                                    | High     | Next.js app                                            | Playwright mobile/desktop screenshots and axe pass                  | in progress |
-| Long-form MDX article                                             | High     | `content/report.mdx`                                   | Static route build and content QA                                   | in progress |
-| Methodology and sources pages                                     | Critical | `/methodology`, `/sources`                             | Routes render; claim/source drill-down works                        | in progress |
-| Public preview                                                    | Critical | Vercel deployment                                      | Public URL, HTTP checks, browser visual verification                | in progress |
-| Public repo ready for publication                                 | High     | Repository and README                                  | Reproducible clean install and one-command verification             | in progress |
-| Source and claim ledgers                                          | Critical | JSON + Markdown ledger                                 | Zod validation and orphan tests                                     | in progress |
-| Demo storyboard/script 60–90s                                     | Medium   | `docs/demo-script.md`                                  | Timed spoken-word estimate and shot list                            | in progress |
-| Exact Superteam copy                                              | High     | `docs/submission-copy.md`                              | Character/content review; links filled before handoff               | in progress |
-| CI: format/lint/types/tests/content/build/e2e/axe/links           | Critical | `.github/workflows/ci.yml`                             | Green local commands and workflow definition                        | in progress |
-| Lighthouse ≥90 in four categories                                 | High     | QA report                                              | Saved Lighthouse JSON/summary against preview                       | in progress |
-| Loading/error/empty states                                        | Medium   | Route boundaries/source UI                             | Component tests and browser checks                                  | in progress |
-| No automatic publish, submit, spend or finance                    | Gate     | Process controls                                       | Human-actions checklist; no execution performed                     | proven      |
+| Requirement / criterion                                 | Priority | Satisfying artifact                 | Objective proof                                                | Status     |
+| ------------------------------------------------------- | -------- | ----------------------------------- | -------------------------------------------------------------- | ---------- |
+| Listing remains open                                    | Gate     | `docs/bounty-spec.md`               | Official listing: OPEN, checked 2026-08-10                     | proven     |
+| Global bounty region and Juan eligible                  | Gate     | `docs/bounty-spec.md`               | Global; no listing-specific exclusion/KYC rule found           | proven     |
+| At least four useful days remain                        | Gate     | `docs/bounty-spec.md`               | Deadline 2026-08-27T06:59:59.999Z                              | proven     |
+| Original educational X thread is mandatory              | Critical | `content/thread.md`                 | Ten original unpublished posts                                 | proven     |
+| Tag `@Apyx_Fi` and include `$APYX` naturally            | Critical | Posts 1 and 8                       | Exact-string validation plus blind editorial review            | proven     |
+| Human publishes thread and submits                      | Critical | `docs/human-actions.md`             | Explicit approval gate                                         | incomplete |
+| Explain Digital Credit and Apyx accurately              | Critical | Thread, report, claims              | 15 primary/official sources and 14 validated claims            | proven     |
+| Educational value and strong counterargument            | High     | Thread, report, interactives        | Blind jury 9.4/10 educational; broker counterargument          | proven     |
+| Accuracy and traceability                               | Critical | JSON/Markdown ledgers, RPC evidence | Zod, orphan checks, exact X parser and blind technical audit   | proven     |
+| Creativity and engagement                               | High     | Risk-stack thesis and seven cards   | Blind editorial audit 91/100                                   | proven     |
+| No unsupported metrics or promises                      | Critical | Validator and copy                  | Prohibited-language and number-ledger checks                   | proven     |
+| Facts / interpretation / inference separated            | Critical | Claims and methodology              | Every retained claim labeled and dated                         | proven     |
+| Underlying and wrapper risk distinguished               | Critical | Thread 6, card 04, Risk Lens        | Dedicated two-layer model                                      | proven     |
+| Holder rights and jurisdiction visible                  | Critical | Thread 8–9, report, claims          | Controlling Terms mapped and dated                             | proven     |
+| Market, liquidity, counterparty, contracts, regulation  | Critical | Risk Lens and article               | Five categories rendered and axe-tested                        | proven     |
+| “What would change my mind”                             | High     | Report and research notes           | Dedicated section                                              | proven     |
+| Five to seven deterministic social cards                | High     | `data/cards.json`, `public/social`  | Seven 1600×900 PNGs; render and visual inspection pass         | proven     |
+| Two to four visuals in first six posts                  | High     | Thread posts 1, 2, 4 and 6          | Four explicit visual references                                | proven     |
+| Premium mobile-first microsite                          | High     | Next.js app                         | Public browser check; no overflow; Playwright desktop/mobile   | proven     |
+| Long-form MDX, methodology and sources                  | Critical | Content and routes                  | Static build and browser route checks                          | proven     |
+| Public preview and repository                           | Critical | GitHub Pages and GitHub             | Deployment and links verified at commit `62ababe`              | proven     |
+| Reproducible source/claim ledger                        | Critical | JSON, RPC snapshot, scope ledger    | 15/15 links; finalized request/response retained               | proven     |
+| Demo script 60–90 seconds                               | Medium   | `docs/demo-script.md`               | Timed 75-second storyboard                                     | proven     |
+| Exact Superteam copy                                    | High     | `docs/submission-copy.md`           | URLs included; X URL intentionally pending                     | proven     |
+| CI: format/lint/types/tests/content/build/e2e/axe/links | Critical | GitHub workflow and local QA        | Local checks green; remote run tracked                         | proven     |
+| Loading/error/empty states                              | Medium   | Route boundaries/source UI          | Component and browser coverage                                 | proven     |
+| Lighthouse at least 90 in four categories               | High     | Public QA record                    | Prior public baseline 98/100/96/100; rerun after v2 deployment | incomplete |
+| No automatic publish, submit, spend or finance          | Gate     | Process controls                    | No prohibited operation performed                              | proven     |

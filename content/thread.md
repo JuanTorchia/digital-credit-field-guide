@@ -44,8 +44,6 @@ Balances can move between wallets, be inspected publicly and become inputs to so
 
 That is distribution infrastructure, not better underwriting.
 
-Visual: `04-layers.png`
-
 ## 6/10
 
 After 20 years designing systems, I read this as two connected layers:
@@ -55,6 +53,8 @@ Underlying — issuer, dividend, market, custody
 Wrapper — contracts, token controls, liquidity, integrations, regulation
 
 The interface is not the obligation.
+
+Visual: `04-layers.png`
 
 ## 7/10
 

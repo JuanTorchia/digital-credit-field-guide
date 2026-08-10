@@ -4,6 +4,18 @@
   "commitment": "finalized",
   "method": "getMultipleAccounts",
   "encoding": "jsonParsed",
+  "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "getMultipleAccounts",
+    "params": [
+      [
+        "HAYQtfJEQ9DbDbaHEhxfGsWbSZ3ywthdsVB3PuB72DYe",
+        "Ex8hKasfFCfj3yGuN5TyYRUjHePgVs3uYUJRT8geT7rv"
+      ],
+      { "encoding": "jsonParsed", "commitment": "finalized" }
+    ]
+  },
   "slot": 438320962,
   "addresses": {
     "apxUSD": "HAYQtfJEQ9DbDbaHEhxfGsWbSZ3ywthdsVB3PuB72DYe",

@@ -28,7 +28,8 @@ explanation.
 - Avoid current yield and market-size figures.
 - Attribute protocol-design claims to Apyx.
 - Mention `$APYX` once as a separate governance layer.
-- Do not repeat the listing’s Solana claim while official documentation conflicts.
+- State Solana deployment only at the narrow boundary supported by the official
+  address registry and reproducible RPC evidence.
 
 ## Jury-driven revision — v2
 

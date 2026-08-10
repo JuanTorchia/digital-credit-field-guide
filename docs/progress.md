@@ -49,6 +49,11 @@ Last updated: 2026-08-10 UTC
   the visual system and verified the exported GitHub Pages URL with its real
   base path. This caught and fixed a duplicated-path metadata bug. E2E now has
   18 desktop/mobile checks covering evidence jumps, downloads and social tags.
+- 2026-08-10: Captured five 1440×900 demo frames from the production static
+  export with reduced motion: hero, Solana trace boundary, stress exercise,
+  claim evidence and share kit. Browser verification found meaningful content,
+  no framework overlay and no page errors. The 75-second storyboard now maps to
+  these real frames and reserves the voiceover for Juan.
 
 ## Gate log
 

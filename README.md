@@ -36,6 +36,8 @@ Run locally with `pnpm dev`, then open http://localhost:3000.
 
 `public/downloads/`: generated copies of the unpublished thread, ledgers, trace and reproducible Solana evidence. Edit the canonical files, then run `pnpm artifacts:render`.
 
+`public/demo/`: five 1440×900 production-export captures corresponding to the 75-second storyboard in `docs/demo-script.md`.
+
 ## Content validation
 
 `pnpm content:validate` checks sources, claims, MDX, thread, cards, scenarios and the system trace. It rejects duplicate or orphan IDs, invalid URLs, verified claims without primary evidence, quantitative claims without units/context, prohibited promise language, missing social requirements, and unsupported figures in the thread or report.

@@ -35,6 +35,14 @@ Last updated: 2026-08-10 UTC
   typographic plates. A blind design pass scored the complete set about 90/100
   (previous estimate: 82/100), with no visual or contrast blocker. Card 07 was
   then widened to a 2×4 question grid for better timeline legibility.
+- 2026-08-10: Expanded `content:validate` across the published MDX, trace,
+  scenarios and cards; added primary-evidence, duplicate-ID and unit/context
+  gates. CI now checks deterministic PNG output and runs both browser projects.
+  E2E fails on console/hydration errors and covers the trace keyboard flow plus
+  the stress exercise. Full `pnpm verify` passed; the final focused run passed
+  4 unit and 14 browser tests, static build, axe, content and all 15 external
+  source links. The link checker now reports bot-blocked URLs as inconclusive
+  rather than verified.
 
 ## Gate log
 

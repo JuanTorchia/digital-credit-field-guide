@@ -1,16 +1,30 @@
 'use client';
 import { useMemo, useState } from 'react';
+import scenarios from '@/data/scenarios.json';
 export function calculateNet(gross: number, costs: number, reserves: number) {
   return Math.max(0, gross - costs - reserves);
 }
 export function YieldWaterfall() {
   const [gross, setGross] = useState(100),
     [costs, setCosts] = useState(12),
-    [reserves, setReserves] = useState(18);
+    [reserves, setReserves] = useState(18),
+    [activeScenario, setActiveScenario] = useState('base');
   const net = useMemo(
     () => calculateNet(gross, costs, reserves),
     [gross, costs, reserves],
   );
+  const inputs = [
+    ['Gross cash flow', gross, setGross],
+    ['Costs & friction', costs, setCosts],
+    ['Reserve retained', reserves, setReserves],
+  ] as const;
+
+  function loadScenario(scenario: (typeof scenarios)[number]) {
+    setGross(scenario.grossCashFlow);
+    setCosts(scenario.costs);
+    setReserves(scenario.reserves);
+    setActiveScenario(scenario.id);
+  }
   return (
     <section
       className="my-20 bg-[#dedbd0] p-6 sm:p-10"
@@ -20,27 +34,41 @@ export function YieldWaterfall() {
       <h2 id="waterfall-title" className="display mt-3 text-5xl">
         Yield is a waterfall, not a headline.
       </h2>
+      <div
+        className="mt-7 flex flex-wrap gap-2"
+        aria-label="Teaching scenarios"
+      >
+        {scenarios.map((scenario) => (
+          <button
+            key={scenario.id}
+            type="button"
+            aria-pressed={activeScenario === scenario.id}
+            title={scenario.note}
+            onClick={() => loadScenario(scenario)}
+            className={`border border-[#172019] px-4 py-2 text-sm font-semibold ${activeScenario === scenario.id ? 'bg-[#172019] text-[#f4f2ea]' : 'bg-transparent'}`}
+          >
+            {scenario.label}
+          </button>
+        ))}
+      </div>
       <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_1.2fr]">
         <div className="space-y-5">
-          {[
-            ['Gross cash flow', gross, setGross],
-            ['Costs & friction', costs, setCosts],
-            ['Reserve retained', reserves, setReserves],
-          ].map(([label, value, setter]) => (
-            <label key={label as string} className="block">
+          {inputs.map(([label, value, setter]) => (
+            <label key={label} className="block">
               <span className="flex justify-between text-sm">
-                <span>{label as string}</span>
-                <output>{value as number} units</output>
+                <span>{label}</span>
+                <output>{value} units</output>
               </span>
               <input
                 className="mt-2 w-full accent-[#b84f2c]"
                 type="range"
                 min="0"
                 max="120"
-                value={value as number}
-                onChange={(e) =>
-                  (setter as (n: number) => void)(Number(e.target.value))
-                }
+                value={value}
+                onChange={(event) => {
+                  setter(Number(event.target.value));
+                  setActiveScenario('custom');
+                }}
               />
             </label>
           ))}

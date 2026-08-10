@@ -7,6 +7,7 @@ describe('educational model', () => {
     expect(calculateNet(100, 12, 18)).toBe(70));
   it('clamps a negative result at zero', () =>
     expect(calculateNet(10, 20, 5)).toBe(0));
+  it('handles the zero boundary', () => expect(calculateNet(0, 0, 0)).toBe(0));
   it('keeps every claim linked to known evidence', () => {
     const ids = new Set(sources.map((s) => s.id));
     expect(claims.every((c) => c.sourceIds.every((id) => ids.has(id)))).toBe(

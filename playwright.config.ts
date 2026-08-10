@@ -3,7 +3,8 @@ export default defineConfig({
   testDir: './tests/e2e',
   fullyParallel: true,
   webServer: {
-    command: 'pnpm dev --port 3100',
+    command:
+      "NEXT_PUBLIC_BASE_PATH='' NEXT_PUBLIC_SITE_URL='http://localhost:3100' pnpm dev --port 3100",
     url: 'http://localhost:3100',
     reuseExistingServer: !process.env.CI,
     timeout: 120000,

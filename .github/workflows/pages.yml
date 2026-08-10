@@ -26,6 +26,7 @@ jobs:
       - run: pnpm verify
         env:
           NEXT_PUBLIC_BASE_PATH: /digital-credit-field-guide
+          NEXT_PUBLIC_SITE_URL: https://juantorchia.github.io
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with: { path: out }

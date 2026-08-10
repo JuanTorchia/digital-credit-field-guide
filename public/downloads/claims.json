@@ -1,0 +1,150 @@
+[
+  {
+    "id": "digital-credit-definition",
+    "claim": "In this field guide, Digital Credit means publicly traded preferred equity issued by digital-asset treasury companies; it is legally equity with credit-like cash-flow characteristics, not a bank deposit.",
+    "sourceIds": ["apyx-thesis", "strategy-strc-8k", "strive-sata-8k"],
+    "asOf": "2026-08-10",
+    "status": "verified",
+    "confidence": "high",
+    "factOrInference": "interpretation",
+    "notes": "Working definition, explicitly narrower than credit generally."
+  },
+  {
+    "id": "preferred-risk",
+    "claim": "Preferred equity ranks below debt and above common equity; dividends and market value can be reduced, suspended, delayed or impaired.",
+    "sourceIds": ["apyx-risk", "strategy-strc-8k", "strive-sata-8k"],
+    "asOf": "2026-08-10",
+    "status": "verified",
+    "confidence": "high",
+    "factOrInference": "fact",
+    "notes": "Issuer-specific terms differ; read each prospectus."
+  },
+  {
+    "id": "apyx-flow",
+    "claim": "Apyx documents a flow from user capital to an offchain treasury holding preferreds and liquid assets, then from offchain dividends to an onchain vault that changes apyUSD redemption value.",
+    "sourceIds": ["apyx-how", "apyx-transparency"],
+    "asOf": "2026-08-10",
+    "status": "verified",
+    "confidence": "medium",
+    "factOrInference": "fact",
+    "notes": "Verified as the protocol's documented design, not independently verified operational performance."
+  },
+  {
+    "id": "two-risk-layers",
+    "claim": "The underlying securities and the protocol wrapper create distinct but connected risk layers: issuer/market/custody risk below, and smart-contract/liquidity/integration risk above.",
+    "sourceIds": ["apyx-risk", "apyx-how", "apyx-terms"],
+    "asOf": "2026-08-10",
+    "status": "verified",
+    "confidence": "high",
+    "factOrInference": "interpretation",
+    "notes": "Core editorial thesis. Tokenization changes access and behavior, not the issuer obligation."
+  },
+  {
+    "id": "onchain-programmability",
+    "claim": "Token rails can make balances transferable and usable by programs, but they do not remove the legal, credit or custody risks of offchain backing.",
+    "sourceIds": ["solana-token-basics", "apyx-risk", "apyx-terms"],
+    "asOf": "2026-08-10",
+    "status": "verified",
+    "confidence": "high",
+    "factOrInference": "interpretation",
+    "notes": "Deliberately avoids implying that every integration is permissionless or available."
+  },
+  {
+    "id": "strc-structure",
+    "claim": "STRC is Strategy's Nasdaq-listed Variable Rate Series A Perpetual Stretch Preferred Stock.",
+    "sourceIds": ["strategy-strc-8k"],
+    "asOf": "2026-08-10",
+    "status": "verified",
+    "confidence": "high",
+    "factOrInference": "fact",
+    "notes": "No current price or forward yield used."
+  },
+  {
+    "id": "sata-structure",
+    "claim": "SATA is Strive's Nasdaq-listed Variable Rate Series A Perpetual Preferred Stock; dividends are payable only if and when declared.",
+    "sourceIds": ["strive-sata-8k"],
+    "asOf": "2026-08-10",
+    "status": "verified",
+    "confidence": "high",
+    "factOrInference": "fact",
+    "notes": "No current price or forward yield used."
+  },
+  {
+    "id": "apyx-no-fixed-peg",
+    "claim": "Apyx states that apxUSD is not designed as a strict one-to-one peg and may trade above or below a one-dollar reference value.",
+    "sourceIds": ["apyx-risk"],
+    "asOf": "2026-08-10",
+    "status": "verified",
+    "confidence": "high",
+    "factOrInference": "fact",
+    "notes": "Attribution to Apyx is essential."
+  },
+  {
+    "id": "solana-launch",
+    "claim": "Apyx publishes Solana mint addresses for apxUSD and apyUSD; at finalized slot 438320962 both resolved as initialized classic SPL Token mints with 6 decimals and retained mint and freeze authorities.",
+    "sourceIds": [
+      "apyx-contract-addresses",
+      "solana-token-basics",
+      "solana-rpc-snapshot"
+    ],
+    "asOf": "2026-08-10",
+    "status": "verified",
+    "confidence": "high",
+    "factOrInference": "fact",
+    "notes": "Unit: token decimals. Context: finalized getMultipleAccounts snapshot. This establishes token representation and visible authority configuration, not reserves, legitimate supply, liquidity, frontend access, accounting location or bridge safety."
+  },
+  {
+    "id": "apyx-token-status",
+    "claim": "$APYX is the Apyx governance token described in current documentation, with a future token generation event; it should not be presented as currently tradable without further verification.",
+    "sourceIds": ["apyx-token-doc", "apyx-terms"],
+    "asOf": "2026-08-10",
+    "status": "verified",
+    "confidence": "medium",
+    "factOrInference": "fact",
+    "notes": "Governance is a distinct control layer; avoid token economics, trading or value claims."
+  },
+  {
+    "id": "holder-rights",
+    "claim": "Apyx Terms describe apxUSD and apyUSD as programmatic claims against protocol modules holding assets, not claims against a particular entity or person; this is not direct ownership of STRC or SATA.",
+    "sourceIds": ["apyx-terms", "apyx-how"],
+    "asOf": "2026-08-10",
+    "status": "verified",
+    "confidence": "high",
+    "factOrInference": "interpretation",
+    "notes": "The first clause paraphrases the controlling Terms. The direct-ownership conclusion is an explicit legal-boundary interpretation, not legal advice."
+  },
+  {
+    "id": "jurisdiction-restrictions",
+    "claim": "Apyx Terms restrict use by persons connected to the United States, European Union, United Kingdom, Canada and other listed territories; access is jurisdiction-dependent rather than global.",
+    "sourceIds": ["apyx-terms"],
+    "asOf": "2026-08-10",
+    "status": "verified",
+    "confidence": "high",
+    "factOrInference": "fact",
+    "notes": "Context: restrictions apply under current Site and Protocol Terms and may change; consult the complete current list."
+  },
+  {
+    "id": "audit-scope-boundary",
+    "claim": "Apyx links 5 assessments; the June 2026 Halborn review covered 2 named EVM contracts and excluded third-party dependencies, economic attacks and later changes, so it does not establish system-wide or Solana assurance.",
+    "sourceIds": [
+      "apyx-audits-index",
+      "halborn-apyx-2026-06",
+      "apyx-contract-addresses"
+    ],
+    "asOf": "2026-08-10",
+    "status": "verified",
+    "confidence": "high",
+    "factOrInference": "interpretation",
+    "notes": "Units/context: 5 reports in the official index; 2 Solidity files in the Halborn scope. Assessed commit ff15937; remediation commit 35fa118. Remaining reports still require individual scope mapping."
+  },
+  {
+    "id": "author-experience",
+    "claim": "Juan Torchia has 20 years of professional IT and software-architecture experience.",
+    "sourceIds": ["juan-linkedin"],
+    "asOf": "2026-08-10",
+    "status": "verified",
+    "confidence": "high",
+    "factOrInference": "fact",
+    "notes": "Unit: years. Context: author biography and professional profile; used as first-person voice, not product authority."
+  }
+]

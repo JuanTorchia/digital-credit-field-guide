@@ -43,6 +43,12 @@ Last updated: 2026-08-10 UTC
   4 unit and 14 browser tests, static build, axe, content and all 15 external
   source links. The link checker now reports bot-blocked URLs as inconclusive
   rather than verified.
+- 2026-08-10: Claims now expose direct dated evidence links instead of raw
+  source IDs. Added deterministic downloads for thread, ledgers, trace and RPC
+  evidence plus one-click card downloads. Generated a 1200×630 OG asset from
+  the visual system and verified the exported GitHub Pages URL with its real
+  base path. This caught and fixed a duplicated-path metadata bug. E2E now has
+  18 desktop/mobile checks covering evidence jumps, downloads and social tags.
 
 ## Gate log
 

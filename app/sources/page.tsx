@@ -2,6 +2,8 @@ import sources from '@/data/sources.json';
 import claims from '@/data/claims.json';
 export const metadata = { title: 'Sources' };
 export default function Sources() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+  const sourceById = new Map(sources.map((source) => [source.id, source]));
   return (
     <main id="main" className="container py-16">
       <p className="label text-[#b84f2c]">SOURCE LEDGER / AS OF 10 AUG 2026</p>
@@ -12,11 +14,37 @@ export default function Sources() {
         Every material statement in the published narrative maps to a dated
         record. Uncertainty is visible, not smoothed away.
       </p>
+      <nav
+        aria-label="Evidence downloads"
+        className="mt-8 flex flex-wrap gap-3"
+      >
+        {[
+          ['Claim ledger', 'claim-ledger.md'],
+          ['Claims JSON', 'claims.json'],
+          ['Sources JSON', 'sources.json'],
+          ['System trace', 'system-trace.json'],
+          ['Solana snapshot', 'solana-mint-evidence.json'],
+        ].map(([label, filename]) => (
+          <a
+            key={filename}
+            href={`${basePath}/downloads/${filename}`}
+            download
+            className="border border-[#172019] px-4 py-2 text-sm font-semibold"
+          >
+            Download {label} ↓
+          </a>
+        ))}
+      </nav>
       <section className="mt-16" aria-labelledby="claims-title">
         <h2 id="claims-title" className="text-2xl font-semibold">
           Claims
         </h2>
         <div className="mt-5 space-y-3">
+          {claims.length === 0 && (
+            <p className="border border-[#c9c7bd] p-5 text-[#596159]">
+              No claims are available in this build.
+            </p>
+          )}
           {claims.map((c) => (
             <details
               key={c.id}
@@ -40,10 +68,33 @@ export default function Sources() {
                 <p>
                   <strong>Confidence:</strong> {c.confidence}
                 </p>
-                <p className="sm:col-span-3">
-                  <strong>Source IDs:</strong> {c.sourceIds.join(', ')}
-                </p>
                 <p className="sm:col-span-3">{c.notes}</p>
+                <div className="mt-2 border-t border-[#c9c7bd] pt-4 sm:col-span-3">
+                  <p className="label text-[#b84f2c]">
+                    Evidence for this claim
+                  </p>
+                  <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+                    {c.sourceIds.map((sourceId) => {
+                      const source = sourceById.get(sourceId);
+                      return source ? (
+                        <li key={sourceId}>
+                          <a
+                            href={`#source-${source.id}`}
+                            className="block border border-[#c9c7bd] p-3 font-medium text-[#172019]"
+                          >
+                            <span className="label text-[#b84f2c]">
+                              {source.id}
+                            </span>
+                            <span className="mt-1 block">{source.title}</span>
+                            <span className="mt-1 block text-xs font-normal text-[#596159]">
+                              {source.publisher} · accessed {source.accessedAt}
+                            </span>
+                          </a>
+                        </li>
+                      ) : null;
+                    })}
+                  </ul>
+                </div>
               </div>
             </details>
           ))}
@@ -54,8 +105,17 @@ export default function Sources() {
           Primary and official sources
         </h2>
         <div className="mt-5 grid gap-3 sm:grid-cols-2">
+          {sources.length === 0 && (
+            <p className="border border-[#c9c7bd] p-5 text-[#596159]">
+              No sources are available in this build.
+            </p>
+          )}
           {sources.map((s) => (
-            <article key={s.id} className="border border-[#c9c7bd] p-5">
+            <article
+              id={`source-${s.id}`}
+              key={s.id}
+              className="scroll-mt-6 border border-[#c9c7bd] p-5 target:bg-[#d9ff63]/20"
+            >
               <p className="label text-[#b84f2c]">{s.id}</p>
               <h3 className="mt-4 text-lg font-semibold">
                 <a href={s.url} target="_blank" rel="noreferrer">

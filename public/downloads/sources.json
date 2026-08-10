@@ -1,0 +1,167 @@
+[
+  {
+    "id": "superteam-bounty",
+    "title": "Why Digital Credit Matters",
+    "publisher": "Superteam Earn / Apyx",
+    "url": "https://superteam.fun/earn/listing/why-digital-credit-matters",
+    "sourceType": "official-listing",
+    "publishedAt": "2026-08-07T13:06:37.100Z",
+    "accessedAt": "2026-08-10",
+    "primary": true,
+    "notes": "Structured page data. Status OPEN, Global, 44 submissions at access, thread required."
+  },
+  {
+    "id": "apyx-thesis",
+    "title": "The Digital Credit Thesis",
+    "publisher": "Apyx",
+    "url": "https://docs.apyx.fi/apyx-overview/the-digital-credit-thesis",
+    "sourceType": "protocol-documentation",
+    "publishedAt": "2026-02-13",
+    "accessedAt": "2026-08-10",
+    "primary": true,
+    "notes": "Apyx framing; promotional claims require independent corroboration."
+  },
+  {
+    "id": "apyx-how",
+    "title": "How Apyx Works",
+    "publisher": "Apyx",
+    "url": "https://docs.apyx.fi/apyx-overview/how-apyx-works",
+    "sourceType": "protocol-documentation",
+    "publishedAt": "2026-06-17",
+    "accessedAt": "2026-08-10",
+    "primary": true,
+    "notes": "Describes offchain treasury, onchain vault, secondary-market access and reward distribution."
+  },
+  {
+    "id": "apyx-risk",
+    "title": "Apyx & DAT Risks",
+    "publisher": "Apyx",
+    "url": "https://docs.apyx.fi/risk-management/apyx-and-dat-risks",
+    "sourceType": "protocol-documentation",
+    "publishedAt": "2026-04-12",
+    "accessedAt": "2026-08-10",
+    "primary": true,
+    "notes": "Protocol's own risk disclosures; expressly says no strict peg, yield can change, and tokens carry risk."
+  },
+  {
+    "id": "apyx-transparency",
+    "title": "Transparency",
+    "publisher": "Apyx",
+    "url": "https://docs.apyx.fi/collateral-and-custody/transparency",
+    "sourceType": "protocol-documentation",
+    "publishedAt": "2026-07-22",
+    "accessedAt": "2026-08-10",
+    "primary": true,
+    "notes": "Links Accountable dashboard, Dune and monthly custodian attestations."
+  },
+  {
+    "id": "apyx-terms",
+    "title": "Terms of Service",
+    "publisher": "Preference Capital (BVI) Ltd. / Apyx",
+    "url": "https://docs.apyx.fi/resources/terms-of-service",
+    "sourceType": "legal-terms",
+    "publishedAt": "2026-03-01",
+    "accessedAt": "2026-08-10",
+    "primary": true,
+    "notes": "Controls over documentation in a conflict; access restrictions and risk disclaimers."
+  },
+  {
+    "id": "strategy-strc-8k",
+    "title": "Strategy Form 8-K — STRC amendments and dividend declaration",
+    "publisher": "Strategy Inc. / SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526270366/d144149d8k.htm",
+    "sourceType": "regulatory-filing",
+    "publishedAt": "2026-06-15",
+    "accessedAt": "2026-08-10",
+    "primary": true,
+    "notes": "Identifies STRC as variable-rate perpetual preferred stock listed on Nasdaq and documents semi-monthly schedule."
+  },
+  {
+    "id": "strive-sata-8k",
+    "title": "Strive Form 8-K — SATA amended terms",
+    "publisher": "Strive, Inc. / SEC EDGAR",
+    "url": "https://www.sec.gov/Archives/edgar/data/1920406/000162828026034804/asst-20260514.htm",
+    "sourceType": "regulatory-filing",
+    "publishedAt": "2026-05-14",
+    "accessedAt": "2026-08-10",
+    "primary": true,
+    "notes": "Identifies SATA and explains per-business-day dividend schedule, if and when declared."
+  },
+  {
+    "id": "apyx-contract-addresses",
+    "title": "Smart Contract Addresses",
+    "publisher": "Apyx",
+    "url": "https://docs.apyx.fi/resources/smart-contract-addresses",
+    "sourceType": "protocol-documentation",
+    "publishedAt": "2026-08-10",
+    "accessedAt": "2026-08-10",
+    "primary": true,
+    "notes": "Lists apxUSD and apyUSD Solana mint addresses; both were independently queried through Solana mainnet RPC and returned initialized SPL Token mints."
+  },
+  {
+    "id": "apyx-token-doc",
+    "title": "APYX",
+    "publisher": "Apyx",
+    "url": "https://docs.apyx.fi/product-overview/apyx",
+    "sourceType": "protocol-documentation",
+    "publishedAt": "2026-06-17",
+    "accessedAt": "2026-08-10",
+    "primary": true,
+    "notes": "Current project description of the planned governance token; future-looking statements are not independently verified."
+  },
+  {
+    "id": "solana-token-basics",
+    "title": "SPL Token Basics",
+    "publisher": "Solana",
+    "url": "https://solana.com/docs/tokens/basics",
+    "sourceType": "network-documentation",
+    "publishedAt": "2026-07-20",
+    "accessedAt": "2026-08-10",
+    "primary": true,
+    "notes": "Official description of token mint, account, transfer, burn and authority primitives."
+  },
+  {
+    "id": "solana-rpc-snapshot",
+    "title": "Apyx Solana mint RPC snapshot",
+    "publisher": "Juan Torchia / Solana mainnet RPC",
+    "url": "https://github.com/JuanTorchia/digital-credit-field-guide/blob/main/data/solana-mint-evidence.json",
+    "sourceType": "reproducible-rpc-snapshot",
+    "publishedAt": "2026-08-10",
+    "accessedAt": "2026-08-10",
+    "primary": true,
+    "notes": "Finalized getMultipleAccounts evidence, slot 438320962, with raw response and explicit limitations."
+  },
+  {
+    "id": "apyx-audits-index",
+    "title": "Audits",
+    "publisher": "Apyx",
+    "url": "https://docs.apyx.fi/resources/audits",
+    "sourceType": "protocol-documentation",
+    "publishedAt": "2026-08-10",
+    "accessedAt": "2026-08-10",
+    "primary": true,
+    "notes": "Index of five assessments. The existence of reports does not establish system-wide scope or security assurance."
+  },
+  {
+    "id": "halborn-apyx-2026-06",
+    "title": "Smart Contract Assessment — APYX",
+    "publisher": "Halborn",
+    "url": "https://www.halborn.com/audits/apyx/smart-contract-assessment-02a20a",
+    "sourceType": "independent-security-assessment",
+    "publishedAt": "2026-06-26",
+    "accessedAt": "2026-08-10",
+    "primary": true,
+    "notes": "EVM assessment of ApyUSD.sol and UnlockReceipt.sol at assessed commit ff15937 and remediation commit 35fa118; third-party dependencies, economic attacks and later changes were out of scope."
+  },
+  {
+    "id": "juan-linkedin",
+    "title": "Juan Torchia — professional profile",
+    "publisher": "Juan Torchia / LinkedIn",
+    "url": "https://www.linkedin.com/in/jtorchia-dev/",
+    "sourceType": "author-profile",
+    "publishedAt": "2026-08-10",
+    "accessedAt": "2026-08-10",
+    "primary": true,
+    "notes": "Author-controlled professional history; used only for the first-person experience statement."
+  }
+]

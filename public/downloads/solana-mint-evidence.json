@@ -1,0 +1,34 @@
+{
+  "accessedAt": "2026-08-10T00:00:00Z",
+  "endpoint": "https://api.mainnet-beta.solana.com",
+  "commitment": "finalized",
+  "method": "getMultipleAccounts",
+  "encoding": "jsonParsed",
+  "request": {
+    "jsonrpc": "2.0",
+    "id": 1,
+    "method": "getMultipleAccounts",
+    "params": [
+      [
+        "HAYQtfJEQ9DbDbaHEhxfGsWbSZ3ywthdsVB3PuB72DYe",
+        "Ex8hKasfFCfj3yGuN5TyYRUjHePgVs3uYUJRT8geT7rv"
+      ],
+      { "encoding": "jsonParsed", "commitment": "finalized" }
+    ]
+  },
+  "slot": 438320962,
+  "addresses": {
+    "apxUSD": "HAYQtfJEQ9DbDbaHEhxfGsWbSZ3ywthdsVB3PuB72DYe",
+    "apyUSD": "Ex8hKasfFCfj3yGuN5TyYRUjHePgVs3uYUJRT8geT7rv"
+  },
+  "observations": {
+    "program": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    "decimals": 6,
+    "bothInitialized": true,
+    "bothRetainMintAuthority": true,
+    "bothRetainFreezeAuthority": true,
+    "sharedFreezeAuthority": "5CcTTUPtSxF1iB5d2fGR7gYHbUBHL1orwzbuZdQGJ1CG"
+  },
+  "limitations": "This snapshot proves account state at one finalized slot. It does not prove reserves, legitimate supply, liquidity, bridge safety, frontend availability or control-identity attribution.",
+  "rawResponse": "data/solana-rpc-response.json"
+}

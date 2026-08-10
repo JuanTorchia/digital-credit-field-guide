@@ -73,3 +73,42 @@ test('all seven social cards load at their export dimensions', async ({
     ).toEqual([1600, 900]);
   }
 });
+
+test('claim evidence links resolve to the exact source record', async ({
+  page,
+}) => {
+  await page.goto('/sources');
+  const claim = page.locator('details').first();
+  await claim.locator('summary').click();
+  const evidence = claim.getByRole('link').first();
+  const target = await evidence.getAttribute('href');
+  expect(target).toMatch(/^#source-/);
+  await evidence.click();
+  await expect(page.locator(target!)).toBeVisible();
+  await expect(page).toHaveURL(new RegExp(`${target}$`));
+});
+
+test('downloads and social metadata expose real artifacts', async ({
+  page,
+  request,
+}) => {
+  await page.goto('/');
+  const ogImage = await page
+    .locator('meta[property="og:image"]')
+    .getAttribute('content');
+  expect(ogImage).toContain('/opengraph-image');
+  await expect(page.locator('meta[name="twitter:card"]')).toHaveAttribute(
+    'content',
+    'summary_large_image',
+  );
+
+  const claimsDownload = await request.get('/downloads/claims.json');
+  expect(claimsDownload.ok()).toBe(true);
+  expect((await claimsDownload.json()).length).toBeGreaterThan(0);
+
+  await page.goto('/share');
+  await expect(page.locator('a[download$=".png"]')).toHaveCount(7);
+  await expect(
+    page.getByRole('link', { name: 'Download unpublished thread' }),
+  ).toHaveAttribute('download', '');
+});

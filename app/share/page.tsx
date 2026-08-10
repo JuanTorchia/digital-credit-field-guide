@@ -13,6 +13,13 @@ export default function Share() {
         Generated deterministically from <code>data/cards.json</code>. No
         decorative AI imagery; only typography, diagrams and documented models.
       </p>
+      <a
+        href={`${basePath}/downloads/unpublished-x-thread.md`}
+        download
+        className="mt-8 inline-block border border-[#172019] bg-[#d9ff63] px-5 py-3 font-semibold"
+      >
+        Download unpublished thread ↓
+      </a>
       <div className="mt-14 grid gap-8 sm:grid-cols-2">
         {cards.map((card, index) => (
           <figure key={card.id}>
@@ -25,7 +32,16 @@ export default function Share() {
               preload={index === 0}
               className="h-auto w-full border border-[#172019]"
             />
-            <figcaption className="label mt-3">{card.id}.png</figcaption>
+            <figcaption className="mt-3 flex items-center justify-between gap-3">
+              <span className="label">{card.id}.png</span>
+              <a
+                href={`${basePath}/social/${card.id}.png`}
+                download={`${card.id}.png`}
+                className="text-sm font-semibold"
+              >
+                Download ↓
+              </a>
+            </figcaption>
           </figure>
         ))}
       </div>

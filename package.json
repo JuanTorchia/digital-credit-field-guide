@@ -6,7 +6,7 @@
   "scripts": {
     "setup": "pnpm install --frozen-lockfile && pnpm exec playwright install chromium",
     "dev": "next dev",
-    "build": "pnpm social:render && next build",
+    "build": "pnpm artifacts:render && next build",
     "start": "next start",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
@@ -17,9 +17,11 @@
     "content:validate": "tsx scripts/validate-content.ts",
     "social:render": "tsx scripts/render-social.ts",
     "social:check": "pnpm social:render && git diff --exit-code -- public/social",
+    "artifacts:render": "pnpm social:render && tsx scripts/sync-downloads.ts",
+    "artifacts:check": "pnpm artifacts:render && git diff --exit-code -- public/social app/opengraph-image.png public/downloads",
     "test:e2e": "playwright test",
     "links:check": "tsx scripts/check-links.ts",
-    "verify": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm content:validate && pnpm social:check && pnpm build && pnpm test:e2e && pnpm links:check"
+    "verify": "pnpm format:check && pnpm lint && pnpm typecheck && pnpm test && pnpm content:validate && pnpm artifacts:check && pnpm build && pnpm test:e2e && pnpm links:check"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",

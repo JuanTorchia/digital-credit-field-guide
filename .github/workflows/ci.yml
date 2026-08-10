@@ -16,7 +16,7 @@ jobs:
       - run: pnpm typecheck
       - run: pnpm test
       - run: pnpm content:validate
-      - run: pnpm social:check
+      - run: pnpm artifacts:check
       - run: pnpm build
       - run: pnpm test:e2e
       - run: pnpm links:check

@@ -216,6 +216,32 @@ async function main() {
       .toFile(resolve(output, `${card.id}.png`));
     console.log(`rendered ${card.id}.png`);
   }
+
+  const og = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
+    <rect width="1200" height="630" fill="#f4f2ea"/>
+    <path d="M0 0H1200V18H0z" fill="#d9ff63"/>
+    <text x="76" y="82" font-family="Arial,sans-serif" font-size="18" letter-spacing="4" fill="#b84f2c">DIGITAL CREDIT FIELD GUIDE</text>
+    <text x="76" y="166" font-family="Georgia,serif" font-size="52" fill="#172019">The interface is not the obligation.</text>
+    ${[
+      ['UNDERLYING', 'Listed preferred equity'],
+      ['PROTOCOL', 'Treasury + modules'],
+      ['TOKEN RAIL', 'Solana representation'],
+    ]
+      .map(([label, value], index) => {
+        const x = 76 + index * 360;
+        return `<rect x="${x}" y="250" width="320" height="150" rx="7" fill="${index === 1 ? '#172019' : index === 2 ? '#d9ff63' : '#fff'}" stroke="#172019"/>
+          <text x="${x + 22}" y="294" font-family="monospace" font-size="15" letter-spacing="2" fill="${index === 1 ? '#d9ff63' : '#b84f2c'}">${label}</text>
+          <text x="${x + 22}" y="350" font-family="Georgia,serif" font-size="25" fill="${index === 1 ? '#f4f2ea' : '#172019'}">${value}</text>`;
+      })
+      .join('')}
+    <text x="76" y="492" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#172019">A source-led systems trace of Apyx and Digital Credit.</text>
+    <path d="M76 546H1124" stroke="#172019"/>
+    <text x="76" y="585" font-family="monospace" font-size="16" letter-spacing="2" fill="#172019">RESEARCH &amp; ENGINEERING — JUAN TORCHIA</text>
+  </svg>`;
+  await sharp(Buffer.from(og))
+    .png({ compressionLevel: 9, adaptiveFiltering: false })
+    .toFile(resolve(root, 'app/opengraph-image.png'));
+  console.log('rendered app/opengraph-image.png');
 }
 
 void main();

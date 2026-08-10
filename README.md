@@ -19,6 +19,7 @@ Run locally with `pnpm dev`, then open http://localhost:3000.
 - MDX long-form source in `content/report.mdx`.
 - Two small client islands: Credit Flow Explorer and hypothetical Yield Waterfall.
 - Seven deterministic 1600×900 PNG cards rendered from `data/cards.json` with Sharp.
+- A deterministic 1200×630 Open Graph image and downloadable evidence bundle generated with the same artifact pipeline.
 - Vitest for model/data invariants; Playwright + axe for desktop/mobile smoke and accessibility.
 
 ## Data dictionary
@@ -32,6 +33,8 @@ Run locally with `pnpm dev`, then open http://localhost:3000.
 `data/cards.json`: single source of truth for social-card copy and ordering.
 
 `data/system-trace.json`: six Apyx system boundaries with linked claims, sources, supported conclusions and explicit evidence limits.
+
+`public/downloads/`: generated copies of the unpublished thread, ledgers, trace and reproducible Solana evidence. Edit the canonical files, then run `pnpm artifacts:render`.
 
 ## Content validation
 

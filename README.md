@@ -51,4 +51,4 @@ Run locally with `pnpm dev`, then open http://localhost:3000.
 
 ## Human approval boundary
 
-This repository does not publish to X, submit to Superteam, connect a wallet, spend credits or execute financial operations. Those actions remain explicitly manual.
+Repository commands do not publish to X, submit to Superteam, connect a wallet, spend credits or execute financial operations. The X publication and Superteam submission were completed separately with Juan's explicit approval; no financial operation was performed.
